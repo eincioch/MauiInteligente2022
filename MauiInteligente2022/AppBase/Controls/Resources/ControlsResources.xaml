@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiInteligente2022.AppBase.Controls.Resources.ControlsResources">
+    <Color x:Key="SubtitleColor">Black</Color>
+    <ControlTemplate x:Key="MasterPageTemplate">
+        <Grid RowDefinitions="auto, *">
+            <Grid Grid.Row="0" ColumnDefinitions="20, auto, *, auto, 20"
+                  BackgroundColor="{StaticResource SubtitleColor}">
+                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="Start"
+                       Text="{TemplateBinding Parent.SubTitle}" 
+                       TextColor="White" FontSize="Subtitle"/>
+
+                <ActivityIndicator Grid.Row="0" Grid.Column="2"
+                                   IsRunning="{TemplateBinding Parent.IsBusy}"
+                                   IsVisible="{TemplateBinding Parent.IsBusy}"
+                                   Color="White" />
+
+                <Label Grid.Row="0" Grid.Column="3"
+                       Text="{TemplateBinding Parent.PageId}"
+                       TextColor="White" FontSize="Subtitle" />
+            </Grid>
+
+            <ContentPresenter Grid.Row="1" />
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>
