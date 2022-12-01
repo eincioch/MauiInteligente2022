@@ -1,10 +1,1 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MauiInteligente2022 {
-    internal class global {
-    }
-}
+﻿global using MauiInteligente2022.Models;

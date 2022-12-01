@@ -12,10 +12,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>MauiInteligente2022</ApplicationTitle>
+		<ApplicationTitle>MAUI Inteligente</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauiinteligente2022</ApplicationId>
+		<ApplicationId>com.josuedev.mauiinteligente2022</ApplicationId>
 		<ApplicationIdGuid>E22119DF-FB3F-4485-AE1A-3EF683F59208</ApplicationIdGuid>
 
 		<!-- Versions -->
