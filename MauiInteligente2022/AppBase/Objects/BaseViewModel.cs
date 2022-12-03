@@ -1,15 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MauiInteligente2022.AppBase.Objects {
+    public abstract class BaseViewModel : ObservableObject {
+        private string _title;
 
-namespace MauiInteligente2022.AppBase.Objects {
-    internal class BaseViewModel {
-        internal void OnAppearing() {
+        public string Title {
+            get => _title;
+            set => SetProperty(ref _title, value);
         }
 
-        internal void OnDisappearing() {
+        private string _subtitle;
+
+        public string SubTitle {
+            get => _subtitle;
+            set => SetProperty(ref _subtitle, value);
         }
+
+        private string _pageId;
+
+        public string PageId {
+            get => _pageId;
+            set => SetProperty(ref _pageId, value);
+        }
+
+        private string _isBusy;
+
+        public string IsBusy {
+            get => _isBusy;
+            set => SetProperty(ref _isBusy, value);
+        }
+
+        public virtual Task OnAppearing() => Task.CompletedTask;
+
+        public virtual Task OnDisappearing() => Task.CompletedTask;
     }
 }
