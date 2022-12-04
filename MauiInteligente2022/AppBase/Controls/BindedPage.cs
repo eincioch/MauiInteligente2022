@@ -51,6 +51,8 @@ namespace MauiInteligente2022.AppBase.Controls {
         }
 
         protected override void OnBindingContextChanged() {
+            base.OnBindingContextChanged();
+
             Binding titleBinding = new("Title");
             SetBinding(TitleProperty, titleBinding);
 
