@@ -9,6 +9,8 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Color x:Key="MainColor">#000080</Color>
+            <Color x:Key="SecondaryColor">#999999</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
