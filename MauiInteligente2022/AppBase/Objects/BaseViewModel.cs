@@ -21,9 +21,9 @@
             set => SetProperty(ref _pageId, value);
         }
 
-        private string _isBusy;
+        private bool _isBusy;
 
-        public string IsBusy {
+        public  bool IsBusy {
             get => _isBusy;
             set => SetProperty(ref _isBusy, value);
         }

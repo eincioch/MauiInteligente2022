@@ -48,6 +48,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\users.svg" />
 	  <None Remove="Resources\Raw\TermsAndConditionsEN.html" />
 	  <None Remove="Resources\Raw\TermsAndConditionsES.html" />
 	  <None Remove="Resources\Splash\mysplash.svg" />
