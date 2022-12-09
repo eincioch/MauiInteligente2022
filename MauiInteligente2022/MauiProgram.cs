@@ -14,7 +14,9 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddTransient<LoginPage>()
-						.AddTransient<LoginViewModel>();
+						.AddTransient<LoginViewModel>()
+						.AddTransient<SplashPage>()
+						.AddTransient<SplashViewModel>();
 
 		return builder.Build();
 	}

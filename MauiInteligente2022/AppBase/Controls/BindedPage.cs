@@ -5,7 +5,8 @@ using Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;
 using System;
 
 namespace MauiInteligente2022.AppBase.Controls {
-    public class BindedPage : ContentPage {
+    [ContentProperty(nameof(LayoutContent))]
+    public abstract class BindedPage : ContentPage {
         public BindedPage() {
             On<iOS>().SetUseSafeArea(true);
         }
