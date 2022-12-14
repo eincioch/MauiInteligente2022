@@ -5,7 +5,7 @@
              x:Class="MauiInteligente2022.Views.LoginPage"
              xmlns:vm="clr-namespace:MauiInteligente2022.ViewModels"
              xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls"
-             xmlns:loc="clr-namespace:MauiInteligente2022.Localization"
+             xmlns:res="clr-namespace:MauiInteligente2022.Localization"
              >
     <d:ContentPage.BindingContext>
         <vm:LoginViewModel />
@@ -16,9 +16,9 @@
 
         <Border Padding="5" StrokeThickness="4" StrokeShape="RoundRectangle 10">
             <VerticalStackLayout Spacing="15">
-                <Entry Placeholder="Usuario" Text="{Binding UserName}" />
-                <Entry Placeholder="Contraseña" IsPassword="True" Text="{Binding Password}" />
-                <Button Text="Iniciar Sesión" Command="{Binding LoginCommand}" />
+                <Entry Placeholder="{x:Static res:Resources.LoginUserPlaceHolder}" Text="{Binding UserName}" />
+                <Entry Placeholder="{x:Static res:Resources.LoginPasswordPlaceHolder}" IsPassword="True" Text="{Binding Password}" />
+                <Button Text="{x:Static res:Resources.LoginButton}" Command="{Binding LoginCommand}" />
             </VerticalStackLayout>
         </Border>
     </VerticalStackLayout>
