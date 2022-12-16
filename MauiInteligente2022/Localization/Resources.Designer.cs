@@ -61,6 +61,24 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string LanguagePageSubtitle {
+            get {
+                return ResourceManager.GetString("LanguagePageSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a Language.
+        /// </summary>
+        internal static string LanguagePageTitle {
+            get {
+                return ResourceManager.GetString("LanguagePageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string LoginButton {
@@ -102,6 +120,15 @@ namespace MauiInteligente2022.Localization {
         internal static string LoginUserPlaceHolder {
             get {
                 return ResourceManager.GetString("LoginUserPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        internal static string NextButton {
+            get {
+                return ResourceManager.GetString("NextButton", resourceCulture);
             }
         }
         

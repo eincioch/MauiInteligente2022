@@ -5,3 +5,4 @@ global using MauiInteligente2022.Localization;
 global using MauiInteligente2022.ViewModels;
 global using MauiInteligente2022.Views;
 global using MauiInteligente2022.AppBase.Controls;
+global using MauiInteligente2022.Configuration;

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="LanguagePageSubtitle" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="LanguagePageTitle" xml:space="preserve">
+    <value>Selecciona un idioma</value>
+  </data>
   <data name="LoginButton" xml:space="preserve">
     <value>Iniciar</value>
   </data>
@@ -131,6 +137,9 @@
   </data>
   <data name="LoginUserPlaceHolder" xml:space="preserve">
     <value>Usuario</value>
+  </data>
+  <data name="NextButton" xml:space="preserve">
+    <value>Siguiente</value>
   </data>
   <data name="SplashWelcome" xml:space="preserve">
     <value>Espera un momento...</value>

@@ -17,7 +17,8 @@
         <Border Padding="5" StrokeThickness="4" StrokeShape="RoundRectangle 10">
             <VerticalStackLayout Spacing="15">
                 <Entry Placeholder="{x:Static res:Resources.LoginUserPlaceHolder}" Text="{Binding UserName}" />
-                <Entry Placeholder="{x:Static res:Resources.LoginPasswordPlaceHolder}" IsPassword="True" Text="{Binding Password}" />
+                <Entry Placeholder="{x:Static res:Resources.LoginPasswordPlaceHolder}" IsPassword="True" 
+                       Text="{Binding Password}" />
                 <Button Text="{x:Static res:Resources.LoginButton}" Command="{Binding LoginCommand}" />
             </VerticalStackLayout>
         </Border>
