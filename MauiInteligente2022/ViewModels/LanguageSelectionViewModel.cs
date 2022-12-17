@@ -41,6 +41,9 @@ namespace MauiInteligente2022.ViewModels {
             Resources.Culture = cultureInfo;
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
+
+            AppConfiguration.HasLanguageSelection = true;
+
             CanGoNext = true;
             Title = Resources.LanguagePageTitle;
             SubTitle = Resources.LanguagePageSubtitle;
