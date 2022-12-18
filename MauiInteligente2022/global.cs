@@ -6,3 +6,4 @@ global using MauiInteligente2022.ViewModels;
 global using MauiInteligente2022.Views;
 global using MauiInteligente2022.AppBase.Controls;
 global using MauiInteligente2022.Configuration;
+global using System.Text.RegularExpressions;
