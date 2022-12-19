@@ -6,13 +6,14 @@
             Title = Resources.TermsPageTitle;
             SubTitle = Resources.TermsPageSubtitle;
             this.sp = sp;
+            AcceptTermsCommand = new(() => AcceptTerms());
         }
 
         public Command AcceptTermsCommand { get; set; }
 
-        //private void AcceptTerms {
-        //    //AppConfiguration.UserAcceptTerms = true;
-        //    //Application.Current.MainPage = new NavigationPage(sp.GetRequiredService<LoginPage>());
-        //}
+        private void AcceptTerms() {
+            AppConfiguration.UserAcceptTerms = true;
+            Application.Current.MainPage = new NavigationPage(sp.GetRequiredService<LoginPage>());
+        }
     }
 }

@@ -51,8 +51,8 @@ namespace MauiInteligente2022.ViewModels {
         }
 
         private async Task GoNextAsync() {
-            var nextPage = sp.GetRequiredService<LoginPage>();
-            Application.Current.MainPage = nextPage;
+            var nextPage = sp.GetRequiredService<TermsAndConditionsPage>();
+            await Application.Current.MainPage.Navigation.PushAsync(nextPage);
         }
     }
 }
