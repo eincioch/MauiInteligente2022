@@ -13,7 +13,8 @@
 
         private void AcceptTerms() {
             AppConfiguration.UserAcceptTerms = true;
-            Application.Current.MainPage = new NavigationPage(sp.GetRequiredService<LoginPage>());
+            Application.Current.MainPage = 
+                new NavigationPage(sp.GetRequiredService<LoginPage>());
         }
     }
 }

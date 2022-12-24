@@ -1,4 +1,5 @@
-﻿using static System.String;
+﻿using Android.Content;
+using static System.String;
 
 namespace MauiInteligente2022.ViewModels {
     public class LoginViewModel : BaseViewModel {
@@ -7,7 +8,10 @@ namespace MauiInteligente2022.ViewModels {
             SubTitle = Resources.LoginSubtitle;
             PageId = LOGIN_PAGE_ID;
 
-            LoginCommand = new(async () => await LoginAsync(), () => !IsNullOrWhiteSpace(_userName) && !IsNullOrWhiteSpace(_password));
+            LoginCommand = new(async () => await LoginAsync(), () => {
+                CanExecuteLogin = !IsNullOrWhiteSpace(_userName) && !IsNullOrWhiteSpace(_password);
+                return CanExecuteLogin;
+            });
         }
 
         private string _userName;
@@ -22,6 +26,13 @@ namespace MauiInteligente2022.ViewModels {
         public string Password {
             get =>_password;
             set => SetProperty(ref _password, value, onChanged: () => LoginCommand.ChangeCanExecute());
+        }
+
+        private bool canLogin;
+
+        public bool CanExecuteLogin {
+            get => canLogin;
+            set => SetProperty(ref canLogin, value);
         }
 
         public Command LoginCommand { get; set; }

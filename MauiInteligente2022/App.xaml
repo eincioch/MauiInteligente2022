@@ -11,6 +11,7 @@
             </ResourceDictionary.MergedDictionaries>
             <Color x:Key="MainColor">#000080</Color>
             <Color x:Key="SecondaryColor">#999999</Color>
+            <Color x:Key="ErrorColor">Red</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

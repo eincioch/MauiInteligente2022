@@ -11,16 +11,59 @@
         <vm:LoginViewModel />
     </d:ContentPage.BindingContext>
 
-    <VerticalStackLayout Margin="30" Spacing="10">
-        <Image Source="users" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout Margin="30" Spacing="10">
+            <Image Source="users" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" />
 
-        <Border Padding="5" StrokeThickness="4" StrokeShape="RoundRectangle 10">
-            <VerticalStackLayout Spacing="15">
-                <Entry Placeholder="{x:Static res:Resources.LoginUserPlaceHolder}" Text="{Binding UserName}" />
-                <Entry Placeholder="{x:Static res:Resources.LoginPasswordPlaceHolder}" IsPassword="True" 
-                       Text="{Binding Password}" />
-                <Button Text="{x:Static res:Resources.LoginButton}" Command="{Binding LoginCommand}" />
-            </VerticalStackLayout>
-        </Border>
-    </VerticalStackLayout>
+            <Border Padding="5" StrokeThickness="4" StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout Spacing="15">
+                    <Entry x:Name="userEntry" Placeholder="{x:Static res:Resources.LoginUserPlaceHolder}" 
+                       Text="{Binding UserName}">
+                        <Entry.Triggers>
+                            <Trigger TargetType="Entry" Property="IsFocused" Value="true">
+                                <Setter Property="TextColor" Value="{DynamicResource Primary}" />
+                            </Trigger>
+                        </Entry.Triggers>
+                    </Entry>
+
+                    <Label Text="{x:Static res:Resources.LoginUserError}" 
+                       TextColor="{DynamicResource ErrorColor}" IsVisible="false">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" 
+                                     Binding="{Binding Source={x:Reference userEntry},
+                                        Path=Text.Length}"
+                                     Value="0">
+                                <Setter Property="IsVisible" Value="true"/>
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <Entry x:Name="passwordEntry" Placeholder="{x:Static res:Resources.LoginPasswordPlaceHolder}"  
+                       Text="{Binding Password}" IsPassword="True">
+                        <Entry.Triggers>
+                            <Trigger TargetType="Entry" Property="IsFocused" Value="true">
+                                <Setter Property="TextColor" Value="{DynamicResource Primary}" />
+                            </Trigger>
+                        </Entry.Triggers>
+                    </Entry>
+
+                    <Label Text="{x:Static res:Resources.LoginPasswordError}" 
+                       TextColor="{DynamicResource ErrorColor}" IsVisible="false">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" 
+                                     Binding="{Binding Source={x:Reference passwordEntry},
+                                        Path=Text.Length}"
+                                     Value="0">
+                                <Setter Property="IsVisible" Value="true"/>
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <Button Text="{x:Static res:Resources.LoginButton}" 
+                            Command="{Binding LoginCommand}" IsVisible="{Binding CanExecuteLogin}" />
+                </VerticalStackLayout>
+            </Border>
+            <Label HeightRequest="400" />
+        </VerticalStackLayout>
+    </ScrollView>
 </controls:BindedPage>

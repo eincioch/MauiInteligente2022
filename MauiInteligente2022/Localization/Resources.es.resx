@@ -126,6 +126,9 @@
   <data name="LoginButton" xml:space="preserve">
     <value>Iniciar</value>
   </data>
+  <data name="LoginPasswordError" xml:space="preserve">
+    <value>Debes escribir una contraseña</value>
+  </data>
   <data name="LoginPasswordPlaceHolder" xml:space="preserve">
     <value>Contraseña</value>
   </data>
@@ -134,6 +137,9 @@
   </data>
   <data name="LoginTitle" xml:space="preserve">
     <value>Iniciar Sesión</value>
+  </data>
+  <data name="LoginUserError" xml:space="preserve">
+    <value>Debes escribir un nombre de usuario</value>
   </data>
   <data name="LoginUserPlaceHolder" xml:space="preserve">
     <value>Usuario</value>

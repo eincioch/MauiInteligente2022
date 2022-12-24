@@ -5,6 +5,7 @@
              xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls"
              xmlns:viewmodels="clr-namespace:MauiInteligente2022.ViewModels"
              x:DataType="viewmodels:LanguageSelectionViewModel">
+    
     <VerticalStackLayout Padding="20" Spacing="20">
         <Button Text="Español" Command="{Binding SpanishSelectionCommand}"/>
         <Button Text="English" Command="{Binding EnglishSelectionCommand}"/>
