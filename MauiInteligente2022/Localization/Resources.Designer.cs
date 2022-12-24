@@ -151,6 +151,78 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        internal static string SignupAddressPlaceholder {
+            get {
+                return ResourceManager.GetString("SignupAddressPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        internal static string SignUpCreateButton {
+            get {
+                return ResourceManager.GetString("SignUpCreateButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Credentials.
+        /// </summary>
+        internal static string SignupCredentials {
+            get {
+                return ResourceManager.GetString("SignupCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-Mail.
+        /// </summary>
+        internal static string SignupEmailPlaceholder {
+            get {
+                return ResourceManager.GetString("SignupEmailPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string SignupPasswordPlaceholder {
+            get {
+                return ResourceManager.GetString("SignupPasswordPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Personal Info.
+        /// </summary>
+        internal static string SignupPersonalData {
+            get {
+                return ResourceManager.GetString("SignupPersonalData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone number.
+        /// </summary>
+        internal static string SignupPhonePlaceholder {
+            get {
+                return ResourceManager.GetString("SignupPhonePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User.
+        /// </summary>
+        internal static string SignupUserPlaceholder {
+            get {
+                return ResourceManager.GetString("SignupUserPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Starting.
         /// </summary>
         internal static string SplashWelcome {

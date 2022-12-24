@@ -1,5 +1,4 @@
-﻿using Android.Content;
-using static System.String;
+﻿using static System.String;
 
 namespace MauiInteligente2022.ViewModels {
     public class LoginViewModel : BaseViewModel {

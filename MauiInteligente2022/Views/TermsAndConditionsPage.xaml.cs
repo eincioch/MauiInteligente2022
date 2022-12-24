@@ -1,7 +1,6 @@
 namespace MauiInteligente2022.Views;
 
 public partial class TermsAndConditionsPage : BindedPage {
-	IServiceProvider sp;
 	public TermsAndConditionsPage(TermsAndConditionsViewModel viewModel) {
 		InitializeComponent();
 		BindingContext = viewModel;

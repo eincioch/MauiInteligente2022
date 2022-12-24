@@ -147,6 +147,30 @@
   <data name="NextButton" xml:space="preserve">
     <value>Next</value>
   </data>
+  <data name="SignupAddressPlaceholder" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="SignUpCreateButton" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="SignupCredentials" xml:space="preserve">
+    <value>User Credentials</value>
+  </data>
+  <data name="SignupEmailPlaceholder" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="SignupPasswordPlaceholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="SignupPersonalData" xml:space="preserve">
+    <value>User Personal Info</value>
+  </data>
+  <data name="SignupPhonePlaceholder" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="SignupUserPlaceholder" xml:space="preserve">
+    <value>User</value>
+  </data>
   <data name="SplashWelcome" xml:space="preserve">
     <value>Starting</value>
   </data>
