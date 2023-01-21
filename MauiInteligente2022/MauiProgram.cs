@@ -19,7 +19,9 @@ public static class MauiProgram {
 						.AddTransient<TermsAndConditionsPage>()
 						.AddTransient<TermsAndConditionsViewModel>()
 						.AddTransient<SignUpPage>()
-						.AddTransient<SignUpViewModel>();
+						.AddTransient<SignUpViewModel>()
+						.AddTransient<MainMenuPage>()
+						.AddTransient<MainMenuViewModel>();
 
 		return builder.Build();
 	}
