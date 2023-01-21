@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Border xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiInteligente2022.AppBase.Controls.MenuItem"
+            Stroke="{x:DynamicResource Primary}"
+            MinimumHeightRequest="120"
+            MinimumWidthRequest="120"
+            StrokeThickness="5">
+    <Border.StrokeShape>
+        <RoundRectangle CornerRadius="60" />
+    </Border.StrokeShape>
+
+    <Grid RowDefinitions="80*, 20*" Padding="5">
+        <ImageButton Margin="10"
+                     x:Name="image"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill" />
+
+        <Label x:Name="label"
+               HorizontalTextAlignment="Center"
+               TextColor="{x:DynamicResource Primary}"
+               LineBreakMode="WordWrap"
+               FontSize="Medium" />
+    </Grid>
+</Border>
