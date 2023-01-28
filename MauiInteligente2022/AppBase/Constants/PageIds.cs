@@ -7,5 +7,6 @@
         public const string SIGUP_PAGE_ID = "O4";
         public const string MAIN_MENU_PAGE_ID = "05";
         public const string ABOUT_PAGE_ID = "06";
+        public const string BRANCH_DETAIL_ID = "07";
     }
 }

@@ -9,5 +9,7 @@
         }
 
         public Command AboutCommand { get; set; }
+
+        public Command LocationsCommand { get; set; }
     }
 }

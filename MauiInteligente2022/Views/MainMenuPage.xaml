@@ -12,7 +12,9 @@
         <controls:MenuItem Grid.Column="0" Grid.Row="0" Source="newreport" />
         <controls:MenuItem Grid.Column="1" Grid.Row="0" Source="reports" />
         <controls:MenuItem Grid.Column="0" Grid.Row="1" Source="sync" />
-        <controls:MenuItem Grid.Column="1" Grid.Row="1" Source="locations" />
+        <controls:MenuItem Grid.Column="1" Grid.Row="1" Source="locations"
+                           Text="{x:Static res:Resources.MainMenuLocations}"
+                           MenuCommand="{Binding LocationsCommand}"/>
         <controls:MenuItem Grid.Column="0" Grid.Row="2" Source="about" />
     </Grid>
 </controls:BindedPage>

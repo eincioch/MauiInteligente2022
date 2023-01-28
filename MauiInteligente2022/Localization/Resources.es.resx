@@ -120,11 +120,35 @@
   <data name="AboutTitle" xml:space="preserve">
     <value>Acerca de</value>
   </data>
+  <data name="AcceptButton" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
+  <data name="BranchDetailTitle" xml:space="preserve">
+    <value>Sucursales</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="GetLocationErrorTitle" xml:space="preserve">
+    <value>Error al obtener la ubicación</value>
+  </data>
+  <data name="GetLocationNotEnabledError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="GetLocationNotSupportedError" xml:space="preserve">
+    <value>Este dispositivo no soporta localización</value>
+  </data>
+  <data name="GetLocationPermissionError" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="LanguagePageSubtitle" xml:space="preserve">
     <value>Español</value>
   </data>
   <data name="LanguagePageTitle" xml:space="preserve">
     <value>Selecciona un idioma</value>
+  </data>
+  <data name="LocationShowRoute" xml:space="preserve">
+    <value>Mostrar Ruta</value>
   </data>
   <data name="LoginButton" xml:space="preserve">
     <value>Iniciar</value>
@@ -146,6 +170,9 @@
   </data>
   <data name="LoginUserPlaceHolder" xml:space="preserve">
     <value>Usuario</value>
+  </data>
+  <data name="MainMenuLocations" xml:space="preserve">
+    <value>Ubicacion</value>
   </data>
   <data name="MainMenuSubtitle" xml:space="preserve">
     <value>Elige una opción</value>

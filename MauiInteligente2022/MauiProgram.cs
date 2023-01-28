@@ -5,6 +5,7 @@ public static class MauiProgram {
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseMauiMaps()
 			.ConfigureFonts(fonts => {
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
@@ -21,7 +22,9 @@ public static class MauiProgram {
 						.AddTransient<SignUpPage>()
 						.AddTransient<SignUpViewModel>()
 						.AddTransient<MainMenuPage>()
-						.AddTransient<MainMenuViewModel>();
+						.AddTransient<MainMenuViewModel>()
+						.AddTransient<BranchDetailPage>()
+						.AddTransient<BranchDetailViewModel>();
 
 		return builder.Build();
 	}

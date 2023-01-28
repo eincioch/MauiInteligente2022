@@ -120,11 +120,35 @@
   <data name="AboutTitle" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="AcceptButton" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="BranchDetailTitle" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="GetLocationErrorTitle" xml:space="preserve">
+    <value>Error getting location</value>
+  </data>
+  <data name="GetLocationNotEnabledError" xml:space="preserve">
+    <value>This device has no geolocation enable</value>
+  </data>
+  <data name="GetLocationNotSupportedError" xml:space="preserve">
+    <value>This device does not support location</value>
+  </data>
+  <data name="GetLocationPermissionError" xml:space="preserve">
+    <value>Permission for geolocation</value>
+  </data>
   <data name="LanguagePageSubtitle" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="LanguagePageTitle" xml:space="preserve">
     <value>Choose a Language</value>
+  </data>
+  <data name="LocationShowRoute" xml:space="preserve">
+    <value>Show Route</value>
   </data>
   <data name="LoginButton" xml:space="preserve">
     <value>Login</value>
@@ -146,6 +170,9 @@
   </data>
   <data name="LoginUserPlaceHolder" xml:space="preserve">
     <value>User</value>
+  </data>
+  <data name="MainMenuLocations" xml:space="preserve">
+    <value>Location</value>
   </data>
   <data name="MainMenuSubtitle" xml:space="preserve">
     <value>Choose an option</value>
