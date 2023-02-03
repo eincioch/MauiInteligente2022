@@ -204,6 +204,12 @@
   <data name="SignupPhonePlaceholder" xml:space="preserve">
     <value>Número de teléfono</value>
   </data>
+  <data name="SignupSubtitle" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="SignupTitle" xml:space="preserve">
+    <value>Nuevo Usuario</value>
+  </data>
   <data name="SignupUserPlaceholder" xml:space="preserve">
     <value>Nombre de usuario</value>
   </data>

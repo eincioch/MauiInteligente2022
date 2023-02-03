@@ -49,6 +49,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="ViewModels\NewFolder\**" />
+	  <Compile Remove="ViewModels\NewFolder\**" />
+	  <EmbeddedResource Remove="ViewModels\NewFolder\**" />
+	  <MauiCss Remove="ViewModels\NewFolder\**" />
+	  <MauiXaml Remove="ViewModels\NewFolder\**" />
+	  <None Remove="ViewModels\NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\splash_logo.svg" />
 	  <None Remove="Resources\Images\users.svg" />
 	  <None Remove="Resources\Raw\TermsAndConditionsEN.html" />
@@ -103,10 +112,6 @@
 	  <MauiXaml Update="Views\TermsAndConditionsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="ViewModels\NewFolder\" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,4 +1,5 @@
-﻿using MauiInteligente2022.AppBase.Validations;
+﻿using MauiInteligente2022.AppBase.Helpers;
+using MauiInteligente2022.AppBase.Validations;
 
 namespace MauiInteligente2022.AppBase.Behaviors;
 
@@ -9,7 +10,10 @@ public class EntryValidationBehavior : Behavior<Entry> {
 
     public static readonly BindableProperty IsValidProperty = IsValidPropertyKey.BindableProperty;
 
-    public ValidationResult IsValid => (ValidationResult)GetValue(IsValidProperty);
+    public ValidationResult IsValid {
+        get => (ValidationResult)GetValue(IsValidProperty);
+        private set => SetValue(IsValidPropertyKey, value);
+    }
 
     static readonly BindableProperty ValidationTypeProperty =
         BindableProperty.Create(nameof(ValidationType), typeof(ValidationType), typeof(EntryValidationBehavior),
@@ -22,13 +26,23 @@ public class EntryValidationBehavior : Behavior<Entry> {
 
     protected override void OnAttachedTo(Entry bindable) {
         bindable.TextChanged += Bindable_TextChanged;
+        bindable.BindingContextChanged += Bindable_BindingContextChanged;
     }
-
+    
     private void Bindable_TextChanged(object sender, TextChangedEventArgs e) {
         var entry = sender as Entry;
+
+        IsValid = ValidationHelper.ValidateString(ValidationType, entry.Text);
+        entry.TextColor = IsValid == ValidationResult.Valid ? Colors.Black : Colors.Red;
     }
 
-    protected override void OnDetachingFrom(BindableObject bindable) {
-        
+    private void Bindable_BindingContextChanged(object sender, EventArgs e) {
+        var entry = sender as Entry;
+        BindingContext = entry.BindingContext;
+    }
+
+    protected override void OnDetachingFrom(Entry bindable) {
+        bindable.TextChanged -= Bindable_TextChanged;
+        bindable.BindingContextChanged -= Bindable_BindingContextChanged;
     }
 }

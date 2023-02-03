@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiInteligente2022.Views.SignUpPage"
              xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls"
-             xmlns:res="clr-namespace:MauiInteligente2022.Localization">
+             xmlns:res="clr-namespace:MauiInteligente2022.Localization"
+             xmlns:bhv="clr-namespace:MauiInteligente2022.AppBase.Behaviors">
 
     <ContentPage.Resources>
         <Style TargetType="Label" x:Key="SectionTitle">
@@ -40,12 +41,20 @@
                         <Label Style="{StaticResource SectionTitle}" Text="{x:Static res:Resources.SignupCredentials}" />
                     </Border>
 
-                    <Entry Grid.Row="1" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupUserPlaceholder}" />
+                    <Entry Grid.Row="1" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupUserPlaceholder}">
+                        <Entry.Behaviors>
+                            <bhv:EntryValidationBehavior ValidationType="Empty" />
+                        </Entry.Behaviors>
+                    </Entry>
                     <Image Grid.Row="1" Grid.Column="1" HeightRequest="35" WidthRequest="35"
                            Source="login_user" />
 
                     <Entry Grid.Row="2" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupPasswordPlaceholder}" 
-                           IsPassword="True" />
+                           IsPassword="True">
+                        <Entry.Behaviors>
+                            <bhv:EntryValidationBehavior ValidationType="Password" />
+                        </Entry.Behaviors>
+                    </Entry>
                     <Image Grid.Row="2" Grid.Column="1" HeightRequest="35" WidthRequest="35"
                            Source="login_user" />
                 </Grid>
@@ -70,17 +79,29 @@
                         <Label Style="{StaticResource SectionTitle}" Text="{x:Static res:Resources.SignupPersonalData}" />
                     </Border>
 
-                    <Entry Grid.Row="1" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupAddressPlaceholder}" />
+                    <Entry Grid.Row="1" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupAddressPlaceholder}">
+                        <Entry.Behaviors>
+                            <bhv:EntryValidationBehavior ValidationType="Empty" />
+                        </Entry.Behaviors>
+                    </Entry>
                     <Image Grid.Row="1" Grid.Column="1" HeightRequest="35" WidthRequest="35"
                            Source="login_user" />
 
                     <Entry Grid.Row="2" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupPhonePlaceholder}"
-                           Keyboard="Telephone"/>
+                           Keyboard="Telephone">
+                        <Entry.Behaviors>
+                            <bhv:EntryValidationBehavior ValidationType="Phone" />
+                        </Entry.Behaviors>
+                    </Entry>
                     <Image Grid.Row="2" Grid.Column="1" HeightRequest="35" WidthRequest="35"
                            Source="login_user" />
 
                     <Entry Grid.Row="3" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupEmailPlaceholder}"
-                           Keyboard="Email"/>
+                           Keyboard="Email">
+                        <Entry.Behaviors>
+                            <bhv:EntryValidationBehavior ValidationType="Email" />
+                        </Entry.Behaviors>
+                    </Entry>
                     <Image Grid.Row="3" Grid.Column="1" HeightRequest="35" WidthRequest="35"
                            Source="login_user" />
                 </Grid>

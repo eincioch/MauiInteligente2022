@@ -322,6 +322,24 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Signup.
+        /// </summary>
+        internal static string SignupSubtitle {
+            get {
+                return ResourceManager.GetString("SignupSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New User.
+        /// </summary>
+        internal static string SignupTitle {
+            get {
+                return ResourceManager.GetString("SignupTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User.
         /// </summary>
         internal static string SignupUserPlaceholder {
