@@ -58,6 +58,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\correct.svg" />
+	  <None Remove="Resources\Images\incorrect.svg" />
+	  <None Remove="Resources\Images\login_user.svg" />
 	  <None Remove="Resources\Images\splash_logo.svg" />
 	  <None Remove="Resources\Images\users.svg" />
 	  <None Remove="Resources\Raw\TermsAndConditionsEN.html" />

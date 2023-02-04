@@ -4,7 +4,9 @@
              x:Class="MauiInteligente2022.Views.SignUpPage"
              xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls"
              xmlns:res="clr-namespace:MauiInteligente2022.Localization"
-             xmlns:bhv="clr-namespace:MauiInteligente2022.AppBase.Behaviors">
+             xmlns:bhv="clr-namespace:MauiInteligente2022.AppBase.Behaviors"
+             xmlns:vm="clr-namespace:MauiInteligente2022.ViewModels"
+             x:DataType="vm:SignUpViewModel">
 
     <ContentPage.Resources>
         <Style TargetType="Label" x:Key="SectionTitle">
@@ -41,21 +43,24 @@
                         <Label Style="{StaticResource SectionTitle}" Text="{x:Static res:Resources.SignupCredentials}" />
                     </Border>
 
-                    <Entry Grid.Row="1" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupUserPlaceholder}">
+                    <Entry Grid.Row="1" Grid.Column="0" 
+                           Placeholder="{x:Static res:Resources.SignupUserPlaceholder}" Text="{Binding UserName}">
                         <Entry.Behaviors>
-                            <bhv:EntryValidationBehavior ValidationType="Empty" />
+                            <bhv:EntryValidationBehavior ValidationType="Empty"
+                                                         IsValid="{Binding UserNameValidationResult}"/>
                         </Entry.Behaviors>
                     </Entry>
-                    <Image Grid.Row="1" Grid.Column="1" HeightRequest="35" WidthRequest="35"
+                    <Image Grid.Row="1" Grid.Column="1" HeightRequest="30" WidthRequest="30"
                            Source="login_user" />
 
                     <Entry Grid.Row="2" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupPasswordPlaceholder}" 
-                           IsPassword="True">
+                           IsPassword="True" Text="{Binding Password}">
                         <Entry.Behaviors>
-                            <bhv:EntryValidationBehavior ValidationType="Password" />
+                            <bhv:EntryValidationBehavior ValidationType="Password"
+                                                         IsValid="{Binding PasswordValidationResult}"/>
                         </Entry.Behaviors>
                     </Entry>
-                    <Image Grid.Row="2" Grid.Column="1" HeightRequest="35" WidthRequest="35"
+                    <Image Grid.Row="2" Grid.Column="1" HeightRequest="30" WidthRequest="30"
                            Source="login_user" />
                 </Grid>
             </Border>
@@ -79,30 +84,31 @@
                         <Label Style="{StaticResource SectionTitle}" Text="{x:Static res:Resources.SignupPersonalData}" />
                     </Border>
 
-                    <Entry Grid.Row="1" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupAddressPlaceholder}">
+                    <Entry Grid.Row="1" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupAddressPlaceholder}"
+                           Text="{Binding Address}">
                         <Entry.Behaviors>
-                            <bhv:EntryValidationBehavior ValidationType="Empty" />
+                            <bhv:EntryValidationBehavior ValidationType="Empty" IsValid="{Binding AddressValidationResult}" />
                         </Entry.Behaviors>
                     </Entry>
-                    <Image Grid.Row="1" Grid.Column="1" HeightRequest="35" WidthRequest="35"
+                    <Image Grid.Row="1" Grid.Column="1" HeightRequest="30" WidthRequest="30"
                            Source="login_user" />
 
                     <Entry Grid.Row="2" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupPhonePlaceholder}"
-                           Keyboard="Telephone">
+                           Keyboard="Telephone" Text="{Binding PhoneNumber}">
                         <Entry.Behaviors>
-                            <bhv:EntryValidationBehavior ValidationType="Phone" />
+                            <bhv:EntryValidationBehavior ValidationType="Phone" IsValid="{Binding PhoneNumberValidationResult}" />
                         </Entry.Behaviors>
                     </Entry>
-                    <Image Grid.Row="2" Grid.Column="1" HeightRequest="35" WidthRequest="35"
+                    <Image Grid.Row="2" Grid.Column="1" HeightRequest="30" WidthRequest="30"
                            Source="login_user" />
 
                     <Entry Grid.Row="3" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupEmailPlaceholder}"
-                           Keyboard="Email">
+                           Keyboard="Email" Text="{Binding Email}">
                         <Entry.Behaviors>
-                            <bhv:EntryValidationBehavior ValidationType="Email" />
+                            <bhv:EntryValidationBehavior ValidationType="Email" IsValid="{Binding EmailValidationResult}" />
                         </Entry.Behaviors>
                     </Entry>
-                    <Image Grid.Row="3" Grid.Column="1" HeightRequest="35" WidthRequest="35"
+                    <Image Grid.Row="3" Grid.Column="1" HeightRequest="30" WidthRequest="30"
                            Source="login_user" />
                 </Grid>
             </Border>
