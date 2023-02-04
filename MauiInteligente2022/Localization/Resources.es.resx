@@ -186,6 +186,12 @@
   <data name="SignupAddressPlaceholder" xml:space="preserve">
     <value>Dirección</value>
   </data>
+  <data name="SignupAlertErrorUserCreation" xml:space="preserve">
+    <value>Ocurrió un error durante la creación de usuario</value>
+  </data>
+  <data name="SignupAlertSuccessUserCreation" xml:space="preserve">
+    <value>El usuario fue creado exitosamente</value>
+  </data>
   <data name="SignUpCreateButton" xml:space="preserve">
     <value>Crear</value>
   </data>
@@ -212,6 +218,9 @@
   </data>
   <data name="SignupUserPlaceholder" xml:space="preserve">
     <value>Nombre de usuario</value>
+  </data>
+  <data name="SignupUsertAlertTitle" xml:space="preserve">
+    <value>Creación de usuario</value>
   </data>
   <data name="SplashWelcome" xml:space="preserve">
     <value>Espera un momento...</value>

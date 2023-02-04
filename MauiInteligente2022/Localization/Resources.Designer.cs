@@ -268,6 +268,24 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There was an error during user creation.
+        /// </summary>
+        internal static string SignupAlertErrorUserCreation {
+            get {
+                return ResourceManager.GetString("SignupAlertErrorUserCreation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User was created successfully.
+        /// </summary>
+        internal static string SignupAlertSuccessUserCreation {
+            get {
+                return ResourceManager.GetString("SignupAlertSuccessUserCreation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create.
         /// </summary>
         internal static string SignUpCreateButton {
@@ -345,6 +363,15 @@ namespace MauiInteligente2022.Localization {
         internal static string SignupUserPlaceholder {
             get {
                 return ResourceManager.GetString("SignupUserPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signup.
+        /// </summary>
+        internal static string SignupUsertAlertTitle {
+            get {
+                return ResourceManager.GetString("SignupUsertAlertTitle", resourceCulture);
             }
         }
         

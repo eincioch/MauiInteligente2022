@@ -6,7 +6,7 @@ public class ValidationResultToImageSourceConverter : IValueConverter {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
         if(value is ValidationResult validationResult) {
             return validationResult switch {
-                ValidationResult.None => null,
+                ValidationResult.None => ImageSource.FromFile(""),
                 ValidationResult.Valid => ImageSource.FromFile("correct"),
                 ValidationResult.Invalid => ImageSource.FromFile("incorrect"),
                 _ => null

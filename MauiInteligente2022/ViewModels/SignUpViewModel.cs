@@ -6,8 +6,27 @@ public class SignUpViewModel : BaseViewModel {
         PageId = SIGUP_PAGE_ID;
         Title = Resources.SignupTitle;
         SubTitle = Resources.SignupSubtitle;
+        CreateUserCommand = new(async () => await CreateUser(), () => IsValid);
     }
 
+    public Command CreateUserCommand { get; set; }
+
+    public Command CancelCommand { get; set; }
+
+    private async Task CreateUser() {
+        if(!IsBusy){
+            IsBusy = true;
+
+            await Task.Delay(3000);
+            await Application.Current.MainPage.DisplayAlert(Resources.SignupUsertAlertTitle,
+                                                            Resources.SignupAlertSuccessUserCreation,
+                                                            Resources.AcceptButton);
+            CleanData();
+            IsBusy = false;
+        }
+    }
+
+    #region Properties
     private string userName;
 
     public string UserName {
@@ -42,13 +61,15 @@ public class SignUpViewModel : BaseViewModel {
         get => phoneNumber;
         set => SetProperty(ref phoneNumber, value);
     }
+    #endregion
 
+    #region Validations
     private void CleanData() {
-        UserName = string.Empty;
-        Password = string.Empty;
-        Email = string.Empty;
-        Address = string.Empty;
-        PhoneNumber = string.Empty;
+        UserName = null;
+        Password = null;
+        Email = null;
+        Address = null;
+        PhoneNumber = null;
     }
 
     private ValidationResult userNameValidationResult;
@@ -90,7 +111,7 @@ public class SignUpViewModel : BaseViewModel {
 
     public bool IsValid {
         get => isValid;
-        set => SetProperty(ref isValid, value);
+        set => SetProperty(ref isValid, value, onChanged: () => CreateUserCommand.ChangeCanExecute());
     }
 
     private void ValidateAll() =>
@@ -99,4 +120,5 @@ public class SignUpViewModel : BaseViewModel {
         && AddressValidationResult == ValidationResult.Valid
         && EmailValidationResult == ValidationResult.Valid
         && PhoneNumberValidationResult == ValidationResult.Valid;
+    #endregion
 }

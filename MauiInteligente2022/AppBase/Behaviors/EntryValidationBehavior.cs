@@ -31,9 +31,11 @@ public class EntryValidationBehavior : Behavior<Entry> {
     
     private void Bindable_TextChanged(object sender, TextChangedEventArgs e) {
         var entry = sender as Entry;
-
-        IsValid = ValidationHelper.ValidateString(ValidationType, entry.Text);
-        entry.TextColor = IsValid == ValidationResult.Valid ? Colors.Black : Colors.Red;
+        if (entry.Text is not null) {
+            IsValid = ValidationHelper.ValidateString(ValidationType, entry.Text);
+            entry.TextColor = IsValid == ValidationResult.Valid ? Colors.Black : Colors.Red;
+        } else
+            IsValid = ValidationResult.None;
     }
 
     private void Bindable_BindingContextChanged(object sender, EventArgs e) {

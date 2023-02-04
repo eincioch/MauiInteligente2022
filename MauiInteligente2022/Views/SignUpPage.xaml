@@ -11,6 +11,7 @@
 
     <ContentPage.Resources>
         <cvt:ValidationResultToImageSourceConverter x:Key="validToImgCvt" />
+        <cvt:ValidationResultToBoolConverter x:Key="validToBoolCvt" />
         <Style TargetType="Label" x:Key="SectionTitle">
             <Setter Property="FontSize" Value="20" />
             <Setter Property="TextColor" Value="{DynamicResource White}" />
@@ -21,7 +22,8 @@
     </ContentPage.Resources>
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="{x:Static res:Resources.SignUpCreateButton}" />
+        <ToolbarItem Text="{x:Static res:Resources.SignUpCreateButton}" 
+                     Command="{Binding CreateUserCommand}" />
     </ContentPage.ToolbarItems>
 
     <ScrollView>
@@ -53,6 +55,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="1" Grid.Column="1" HeightRequest="30" WidthRequest="30"
+                           IsVisible="{Binding UserNameValidationResult, Converter={StaticResource validToBoolCvt}}"
                            Source="{Binding UserNameValidationResult, Converter={StaticResource validToImgCvt}}" />
 
                     <Entry Grid.Row="2" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupPasswordPlaceholder}" 
@@ -63,6 +66,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="2" Grid.Column="1" HeightRequest="30" WidthRequest="30"
+                           IsVisible="{Binding PasswordValidationResult, Converter={StaticResource validToBoolCvt}}"
                            Source="{Binding PasswordValidationResult, Converter={StaticResource validToImgCvt}}" />
                 </Grid>
             </Border>
@@ -93,6 +97,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="1" Grid.Column="1" HeightRequest="30" WidthRequest="30"
+                           IsVisible="{Binding AddressValidationResult, Converter={StaticResource validToBoolCvt}}"
                            Source="{Binding AddressValidationResult, Converter={StaticResource validToImgCvt}}" />
 
                     <Entry Grid.Row="2" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupPhonePlaceholder}"
@@ -102,6 +107,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="2" Grid.Column="1" HeightRequest="30" WidthRequest="30"
+                           IsVisible="{Binding PhoneNumberValidationResult, Converter={StaticResource validToBoolCvt}}"
                            Source="{Binding PhoneNumberValidationResult, Converter={StaticResource validToImgCvt}}" />
 
                     <Entry Grid.Row="3" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupEmailPlaceholder}"
@@ -111,6 +117,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="3" Grid.Column="1" HeightRequest="30" WidthRequest="30"
+                           IsVisible="{Binding EmailValidationResult, Converter={StaticResource validToBoolCvt}}"
                            Source="{Binding EmailValidationResult, Converter={StaticResource validToImgCvt}}" />
                 </Grid>
             </Border>
