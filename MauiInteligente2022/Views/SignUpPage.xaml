@@ -6,9 +6,11 @@
              xmlns:res="clr-namespace:MauiInteligente2022.Localization"
              xmlns:bhv="clr-namespace:MauiInteligente2022.AppBase.Behaviors"
              xmlns:vm="clr-namespace:MauiInteligente2022.ViewModels"
+             xmlns:cvt="clr-namespace:MauiInteligente2022.AppBase.Converters"
              x:DataType="vm:SignUpViewModel">
 
     <ContentPage.Resources>
+        <cvt:ValidationResultToImageSourceConverter x:Key="validToImgCvt" />
         <Style TargetType="Label" x:Key="SectionTitle">
             <Setter Property="FontSize" Value="20" />
             <Setter Property="TextColor" Value="{DynamicResource White}" />
@@ -51,7 +53,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="1" Grid.Column="1" HeightRequest="30" WidthRequest="30"
-                           Source="login_user" />
+                           Source="{Binding UserNameValidationResult, Converter={StaticResource validToImgCvt}}" />
 
                     <Entry Grid.Row="2" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupPasswordPlaceholder}" 
                            IsPassword="True" Text="{Binding Password}">
@@ -61,7 +63,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="2" Grid.Column="1" HeightRequest="30" WidthRequest="30"
-                           Source="login_user" />
+                           Source="{Binding PasswordValidationResult, Converter={StaticResource validToImgCvt}}" />
                 </Grid>
             </Border>
 
@@ -91,7 +93,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="1" Grid.Column="1" HeightRequest="30" WidthRequest="30"
-                           Source="login_user" />
+                           Source="{Binding AddressValidationResult, Converter={StaticResource validToImgCvt}}" />
 
                     <Entry Grid.Row="2" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupPhonePlaceholder}"
                            Keyboard="Telephone" Text="{Binding PhoneNumber}">
@@ -100,7 +102,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="2" Grid.Column="1" HeightRequest="30" WidthRequest="30"
-                           Source="login_user" />
+                           Source="{Binding PhoneNumberValidationResult, Converter={StaticResource validToImgCvt}}" />
 
                     <Entry Grid.Row="3" Grid.Column="0" Placeholder="{x:Static res:Resources.SignupEmailPlaceholder}"
                            Keyboard="Email" Text="{Binding Email}">
@@ -109,7 +111,7 @@
                         </Entry.Behaviors>
                     </Entry>
                     <Image Grid.Row="3" Grid.Column="1" HeightRequest="30" WidthRequest="30"
-                           Source="login_user" />
+                           Source="{Binding EmailValidationResult, Converter={StaticResource validToImgCvt}}" />
                 </Grid>
             </Border>
 
