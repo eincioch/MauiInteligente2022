@@ -1,27 +1,43 @@
 ﻿using MauiInteligente2022.AppBase.Validations;
+using Org.Apache.Http.Authentication;
+using System.Net.Http.Json;
 
 namespace MauiInteligente2022.ViewModels; 
 public class SignUpViewModel : BaseViewModel {
-    public SignUpViewModel() {
+    private readonly HttpClient signupHttpClient;
+
+    public SignUpViewModel(HttpClient signupHttpClient) {
         PageId = SIGUP_PAGE_ID;
         Title = Resources.SignupTitle;
         SubTitle = Resources.SignupSubtitle;
         CreateUserCommand = new(async () => await CreateUser(), () => IsValid);
+        this.signupHttpClient = signupHttpClient;
     }
 
     public Command CreateUserCommand { get; set; }
 
     public Command CancelCommand { get; set; }
 
+    record NewUserDTO(string UserName, string Password, string Email, string PhoneNumber, string Address);
+
     private async Task CreateUser() {
         if(!IsBusy){
             IsBusy = true;
 
-            await Task.Delay(3000);
-            await Application.Current.MainPage.DisplayAlert(Resources.SignupUsertAlertTitle,
+            NewUserDTO newUser = new(UserName, Password, Email, PhoneNumber, Address);
+
+            HttpResponseMessage httpResponse =
+                await signupHttpClient.PostAsJsonAsync("/auth/register", newUser);
+
+            if (httpResponse.IsSuccessStatusCode) {
+                await Application.Current.MainPage.DisplayAlert(Resources.SignupUsertAlertTitle,
                                                             Resources.SignupAlertSuccessUserCreation,
                                                             Resources.AcceptButton);
-            CleanData();
+                CleanData();
+            } else
+                await Application.Current.MainPage.DisplayAlert(Resources.SignupUsertAlertTitle,
+                                                            Resources.SignupAlertErrorUserCreation,
+                                                            Resources.AcceptButton);            
             IsBusy = false;
         }
     }

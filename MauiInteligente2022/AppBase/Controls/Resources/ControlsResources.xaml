@@ -3,20 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiInteligente2022.AppBase.Controls.Resources.ControlsResources">
     <Color x:Key="SubtitleColor">Gray</Color>
+    
     <ControlTemplate x:Key="MasterPageTemplate">
         <Grid RowDefinitions="auto, *">
-            <Grid Grid.Row="0" ColumnDefinitions="20, auto, *, auto, 20"
+            <Grid Grid.Column="0" Grid.Row="0" ColumnDefinitions="20, auto, *, auto, 20"
                   BackgroundColor="{StaticResource SubtitleColor}">
-                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="Start"
+                <Label Grid.Column="1" HorizontalTextAlignment="Start"
                        Text="{TemplateBinding Parent.SubTitle}" 
                        TextColor="White" FontSize="Subtitle"/>
 
-                <ActivityIndicator Grid.Row="0" Grid.Column="2"
+                <ActivityIndicator Grid.Column="2"
                                    IsRunning="{TemplateBinding Parent.IsBusy}"
                                    IsVisible="{TemplateBinding Parent.IsBusy}"
                                    Color="White" />
 
-                <Label Grid.Row="0" Grid.Column="3"
+                <Label Grid.Column="3"
                        Text="{TemplateBinding Parent.PageId, StringFormat='MI-{0}'}"
                        TextColor="White" FontSize="Subtitle" />
             </Grid>

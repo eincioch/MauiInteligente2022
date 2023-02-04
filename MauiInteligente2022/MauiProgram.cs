@@ -26,6 +26,12 @@ public static class MauiProgram {
 						.AddTransient<BranchDetailPage>()
 						.AddTransient<BranchDetailViewModel>();
 
+		builder.Services.AddHttpClient<SignUpViewModel>(client => {
+				client.Timeout = TimeSpan.FromSeconds(40);
+				client.BaseAddress = new("https://apinetmauinteligente22.azurewebsites.net");
+			});
+		;
+
 		return builder.Build();
 	}
 }
