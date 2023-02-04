@@ -2,7 +2,7 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiInteligente2022.AppBase.Controls.Resources.ControlsResources">
-    <Color x:Key="SubtitleColor">Red</Color>
+    <Color x:Key="SubtitleColor">Gray</Color>
     <ControlTemplate x:Key="MasterPageTemplate">
         <Grid RowDefinitions="auto, *">
             <Grid Grid.Row="0" ColumnDefinitions="20, auto, *, auto, 20"

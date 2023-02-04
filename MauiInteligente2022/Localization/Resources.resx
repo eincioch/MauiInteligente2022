@@ -201,6 +201,26 @@
   <data name="SignupEmailPlaceholder" xml:space="preserve">
     <value>E-Mail</value>
   </data>
+  <data name="SignupInvalidAddressMessage" xml:space="preserve">
+    <value>Must write an address</value>
+  </data>
+  <data name="SignupInvalidEmailMessage" xml:space="preserve">
+    <value>Must write a valid email</value>
+  </data>
+  <data name="SignupInvalidPasswordMessage" xml:space="preserve">
+    <value>The password must meet the following requirements:
+- At least 1 lowercase
+- At least 1 uppercase
+- At least 1 number
+- At least 1 special character @$!%*?&amp;
+- The minimum length is 8 characters</value>
+  </data>
+  <data name="SignupInvalidPhoneNumberMessage" xml:space="preserve">
+    <value>The phone number must meet this format +55 12345678</value>
+  </data>
+  <data name="SignupInvalidUserNameMessage" xml:space="preserve">
+    <value>Must write an user name</value>
+  </data>
   <data name="SignupPasswordPlaceholder" xml:space="preserve">
     <value>Password</value>
   </data>

@@ -201,6 +201,26 @@
   <data name="SignupEmailPlaceholder" xml:space="preserve">
     <value>Correo electrónico</value>
   </data>
+  <data name="SignupInvalidAddressMessage" xml:space="preserve">
+    <value>Debes escribir una dirección</value>
+  </data>
+  <data name="SignupInvalidEmailMessage" xml:space="preserve">
+    <value>Debes escribir una dirección electrónica válida</value>
+  </data>
+  <data name="SignupInvalidPasswordMessage" xml:space="preserve">
+    <value>La contraseña debe cumplir los siguientes requisitos:
+- Contener al menos 1 mayúscula
+- Contener al menos 1 minúscula
+- Contener al menos 1 número
+- Contener al menos 1 carácter de los siguientes @$!%*?&amp;
+- Al menos 8 caracteres</value>
+  </data>
+  <data name="SignupInvalidPhoneNumberMessage" xml:space="preserve">
+    <value>El número de teléfono debe cumplir el siguiente formato +55 12345678</value>
+  </data>
+  <data name="SignupInvalidUserNameMessage" xml:space="preserve">
+    <value>Debes escribir un nombre de usuario</value>
+  </data>
   <data name="SignupPasswordPlaceholder" xml:space="preserve">
     <value>Contraseña</value>
   </data>

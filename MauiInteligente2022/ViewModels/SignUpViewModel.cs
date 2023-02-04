@@ -114,11 +114,32 @@ public class SignUpViewModel : BaseViewModel {
         set => SetProperty(ref isValid, value, onChanged: () => CreateUserCommand.ChangeCanExecute());
     }
 
-    private void ValidateAll() =>
+    private string errorMessage;
+
+    public string ErrorMessage {
+        get => errorMessage;
+        set => SetProperty(ref errorMessage, value);
+    }
+
+    private void ValidateAll() {
         IsValid = UserNameValidationResult == ValidationResult.Valid
         && PasswordValidationResult == ValidationResult.Valid
         && AddressValidationResult == ValidationResult.Valid
         && EmailValidationResult == ValidationResult.Valid
         && PhoneNumberValidationResult == ValidationResult.Valid;
+
+        if (UserNameValidationResult == ValidationResult.Invalid)
+            ErrorMessage = Resources.SignupInvalidUserNameMessage;
+        else if (PasswordValidationResult == ValidationResult.Invalid)
+            ErrorMessage = Resources.SignupInvalidPasswordMessage;
+        else if (AddressValidationResult == ValidationResult.Invalid)
+            ErrorMessage = Resources.SignupInvalidAddressMessage;
+        else if (PhoneNumberValidationResult == ValidationResult.Invalid)
+            ErrorMessage = Resources.SignupInvalidPhoneNumberMessage;
+        else if (EmailValidationResult == ValidationResult.Invalid)
+            ErrorMessage = Resources.SignupInvalidEmailMessage;
+        else
+            ErrorMessage = string.Empty;
+    }
     #endregion
 }

@@ -313,6 +313,56 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Must write an address.
+        /// </summary>
+        internal static string SignupInvalidAddressMessage {
+            get {
+                return ResourceManager.GetString("SignupInvalidAddressMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Must write a valid email.
+        /// </summary>
+        internal static string SignupInvalidEmailMessage {
+            get {
+                return ResourceManager.GetString("SignupInvalidEmailMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password must meet the following requirements:
+        ///- At least 1 lowercase
+        ///- At least 1 uppercase
+        ///- At least 1 number
+        ///- At least 1 special character @$!%*?&amp;
+        ///- The minimum length is 8 characters.
+        /// </summary>
+        internal static string SignupInvalidPasswordMessage {
+            get {
+                return ResourceManager.GetString("SignupInvalidPasswordMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The phone number must meet this format +55 12345678.
+        /// </summary>
+        internal static string SignupInvalidPhoneNumberMessage {
+            get {
+                return ResourceManager.GetString("SignupInvalidPhoneNumberMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Must write an user name.
+        /// </summary>
+        internal static string SignupInvalidUserNameMessage {
+            get {
+                return ResourceManager.GetString("SignupInvalidUserNameMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string SignupPasswordPlaceholder {

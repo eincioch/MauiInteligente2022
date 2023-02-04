@@ -12,6 +12,7 @@
     <ContentPage.Resources>
         <cvt:ValidationResultToImageSourceConverter x:Key="validToImgCvt" />
         <cvt:ValidationResultToBoolConverter x:Key="validToBoolCvt" />
+        <cvt:EmptyToBoolConverter x:Key="emptyToBoolCvt" />
         <Style TargetType="Label" x:Key="SectionTitle">
             <Setter Property="FontSize" Value="20" />
             <Setter Property="TextColor" Value="{DynamicResource White}" />
@@ -122,6 +123,24 @@
                 </Grid>
             </Border>
 
+            <ContentView IsVisible="{Binding ErrorMessage, Converter={x:StaticResource emptyToBoolCvt}}">
+                <Border Stroke="{DynamicResource ErrorColor}" 
+                    Background="{DynamicResource White}">
+                    <Border.Shadow>
+                        <Shadow Offset="5, 10" Opacity=".5" />
+                    </Border.Shadow>
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20" />
+                    </Border.StrokeShape>
+
+                    <VerticalStackLayout Margin="10" Padding="5">
+                        <Label Text="{Binding ErrorMessage}" FontAttributes="Bold" />
+                        <Image HeightRequest="20" WidthRequest="20" Source="incorrect" />
+                    </VerticalStackLayout>
+                </Border>
+            </ContentView>
+            
             <Label HeightRequest="500" />
         </VerticalStackLayout>
     </ScrollView>
