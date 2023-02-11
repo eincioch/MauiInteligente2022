@@ -4,6 +4,54 @@
              x:Class="MauiInteligente2022.Views.AboutPage"
              xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls"
              xmlns:res="clr-namespace:MauiInteligente2022.Localization"
-             xmlns:vm="clr-namespace:MauiInteligente2022.ViewModels">
+             xmlns:vm="clr-namespace:MauiInteligente2022.ViewModels"
+                     x:DataType="vm:AboutViewModel">
+    <ContentPage.Resources>
+        <Style TargetType="Border" x:Key="AboutBorderHeader">
+            <Setter Property="Margin" Value="-20, -20, -20, 0" />
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}" />
+        </Style>
+        
+        <Style TargetType="Label" x:Key="AboutLabelHeader">
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
 
+        <Style TargetType="Label" x:Key="AboutLabelVersion">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="TextColor" Value="{DynamicResource Primary}"/>
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="AboutLabelData">
+            <Setter Property="TextColor" Value="{DynamicResource Primary}"/>
+            <Setter Property="HorizontalTextAlignment" Value="End" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <Grid Margin="20" RowDefinitions="50,40,20,20,20,20,20"
+          ColumnDefinitions="*, *" ColumnSpacing="20" RowSpacing="15">
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource AboutBorderHeader}">
+            <Label Text="{Binding AppName}" Style="{StaticResource AboutLabelHeader}" />
+        </Border>
+
+        <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource AboutLabelVersion}"
+               Text="{Binding AppVersion}" />
+
+        <Label Grid.Column="0" Grid.Row="2" Text="DeviceName" Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="3" Text="Platform" Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="4" Text="SystemVersion" Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="5" Text="Manufacturer" Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="6" Text="DeviceModel" Style="{StaticResource AboutLabelData}" />
+
+        <Label Grid.Column="1" Grid.Row="2" Text="{Binding DeviceName}" />
+        <Label Grid.Column="1" Grid.Row="3" Text="{Binding DevicePlatform}" />
+        <Label Grid.Column="1" Grid.Row="4" Text="{Binding SystemVersion}" />
+        <Label Grid.Column="1" Grid.Row="5" Text="{Binding DeviceManufacturer}" />
+        <Label Grid.Column="1" Grid.Row="6" Text="{Binding DeviceModel}" />
+        
+    </Grid>
 </controls:BindedPage>

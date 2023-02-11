@@ -24,6 +24,8 @@ public static class MauiProgram {
 						.AddTransient<MainMenuPage>()
 						.AddTransient<MainMenuViewModel>()
 						.AddTransient<BranchDetailPage>()
+						.AddTransient<AboutPage>()
+						.AddTransient<AboutViewModel>()
 						.AddTransient<BranchDetailViewModel>();
 
 		builder.Services.AddHttpClient<SignUpViewModel>(client => {
