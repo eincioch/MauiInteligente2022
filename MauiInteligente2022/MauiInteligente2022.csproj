@@ -103,6 +103,9 @@
 	  <MauiXaml Update="Views\Locations\BranchDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Locations\LocationsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -121,6 +124,10 @@
 	  <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
 	  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
 	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.58" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BaseRestClientCore\BaseRestClientCore.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -26,7 +26,9 @@ public static class MauiProgram {
 						.AddTransient<BranchDetailPage>()
 						.AddTransient<AboutPage>()
 						.AddTransient<AboutViewModel>()
-						.AddTransient<BranchDetailViewModel>();
+						.AddTransient<BranchDetailViewModel>()
+						.AddTransient<LocationsViewModel>()
+						.AddTransient<LocationsPage>();
 
 		builder.Services.AddHttpClient<SignUpViewModel>(client => {
 				client.Timeout = TimeSpan.FromSeconds(40);
