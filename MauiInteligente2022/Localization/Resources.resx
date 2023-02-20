@@ -153,6 +153,9 @@
   <data name="LoginButton" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="LoginPageSignupButton" xml:space="preserve">
+    <value>Create your account</value>
+  </data>
   <data name="LoginPasswordError" xml:space="preserve">
     <value>Must write a password</value>
   </data>
@@ -163,6 +166,9 @@
     <value>Welcome</value>
   </data>
   <data name="LoginTitle" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginUserAlertTitle" xml:space="preserve">
     <value>Login</value>
   </data>
   <data name="LoginUserError" xml:space="preserve">
