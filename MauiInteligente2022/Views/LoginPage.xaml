@@ -6,11 +6,8 @@
              xmlns:vm="clr-namespace:MauiInteligente2022.ViewModels"
              xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls"
              xmlns:res="clr-namespace:MauiInteligente2022.Localization"
-             >
-    <d:ContentPage.BindingContext>
-        <vm:LoginViewModel />
-    </d:ContentPage.BindingContext>
-
+             x:DataType="vm:LoginViewModel">
+    
     <ScrollView>
         <VerticalStackLayout Margin="30" Spacing="10">
             <Image Source="users" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" />
@@ -63,6 +60,11 @@
                             Command="{Binding LoginCommand}" IsVisible="{Binding CanExecuteLogin}" />
                 </VerticalStackLayout>
             </Border>
+
+            <Button Text="{x:Static res:Resources.LoginPageSignupButton}"
+                    BackgroundColor="{x:DynamicResource SecondaryColor}"
+                    Command="{Binding SignupCommand}"/>
+            
             <Label HeightRequest="400" />
         </VerticalStackLayout>
     </ScrollView>

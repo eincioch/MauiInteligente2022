@@ -1,7 +1,7 @@
 ﻿namespace MauiInteligente2022;
 
 public partial class App : Application {
-	public App(AboutPage page) {
+	public App(SplashPage page) {
 		InitializeComponent();
 
 		MainPage = new NavigationPage(page);

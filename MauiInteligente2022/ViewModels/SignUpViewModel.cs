@@ -1,5 +1,4 @@
 ﻿using MauiInteligente2022.AppBase.Validations;
-using Org.Apache.Http.Authentication;
 using System.Net.Http.Json;
 
 namespace MauiInteligente2022.ViewModels; 
@@ -27,7 +26,7 @@ public class SignUpViewModel : BaseViewModel {
             NewUserDTO newUser = new(UserName, Password, Email, PhoneNumber, Address);
 
             HttpResponseMessage httpResponse =
-                await signupHttpClient.PostAsJsonAsync("/auth/register", newUser);
+                await signupHttpClient.PostAsJsonAsync("", newUser);
 
             if (httpResponse.IsSuccessStatusCode) {
                 await Application.Current.MainPage.DisplayAlert(Resources.SignupUsertAlertTitle,
