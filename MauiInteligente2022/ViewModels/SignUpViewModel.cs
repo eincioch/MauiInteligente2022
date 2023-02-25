@@ -1,5 +1,4 @@
 ﻿using MauiInteligente2022.AppBase.Validations;
-using Org.Apache.Http.Authentication;
 using System.Net.Http.Json;
 
 namespace MauiInteligente2022.ViewModels; 
