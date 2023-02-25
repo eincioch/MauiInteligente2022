@@ -169,6 +169,15 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create your account.
+        /// </summary>
+        internal static string LoginPageSignupButton {
+            get {
+                return ResourceManager.GetString("LoginPageSignupButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Must write a password.
         /// </summary>
         internal static string LoginPasswordError {
@@ -201,6 +210,15 @@ namespace MauiInteligente2022.Localization {
         internal static string LoginTitle {
             get {
                 return ResourceManager.GetString("LoginTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string LoginUserAlertTitle {
+            get {
+                return ResourceManager.GetString("LoginUserAlertTitle", resourceCulture);
             }
         }
         

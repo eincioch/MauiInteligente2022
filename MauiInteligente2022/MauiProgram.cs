@@ -1,4 +1,7 @@
-﻿namespace MauiInteligente2022;
+﻿using Microsoft.Extensions.Configuration;
+using System.Reflection;
+
+namespace MauiInteligente2022;
 
 public static class MauiProgram {
 	public static MauiApp CreateMauiApp() {
@@ -10,6 +13,10 @@ public static class MauiProgram {
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+
+		using var jsonConfig = Assembly.GetExecutingAssembly().GetManifestResourceStream("appsettings.json");
+		var config = new ConfigurationBuilder().AddJsonStream(jsonConfig).Build();
+		builder.Configuration.AddConfiguration(config);
 
 		builder.Services.AddTransient<LoginPage>()
 						.AddTransient<LoginViewModel>()
@@ -32,10 +39,13 @@ public static class MauiProgram {
 
 		builder.Services.AddHttpClient<SignUpViewModel>(client => {
 				client.Timeout = TimeSpan.FromSeconds(40);
-				client.BaseAddress = new("https://apinetmauinteligente22.azurewebsites.net");
-			});
-		;
+				client.BaseAddress = new($"{builder.Configuration["Api:Uri"]}{builder.Configuration["Api:Signup"]}");
+		});
+        builder.Services.AddHttpClient<LoginViewModel>(client => {
+            client.Timeout = TimeSpan.FromSeconds(40);
+            client.BaseAddress = new($"{builder.Configuration["Api:Uri"]}{builder.Configuration["Api:Login"]}");
+        });
 
-		return builder.Build();
+        return builder.Build();
 	}
 }
