@@ -150,6 +150,9 @@
   <data name="LocationShowRoute" xml:space="preserve">
     <value>Show Route</value>
   </data>
+  <data name="LoginAlertError" xml:space="preserve">
+    <value>Error during login. Please check your credentials</value>
+  </data>
   <data name="LoginButton" xml:space="preserve">
     <value>Login</value>
   </data>

@@ -160,6 +160,15 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error during login. Please check your credentials.
+        /// </summary>
+        internal static string LoginAlertError {
+            get {
+                return ResourceManager.GetString("LoginAlertError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string LoginButton {

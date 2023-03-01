@@ -61,7 +61,9 @@ namespace MauiInteligente2022.ViewModels {
                 if (loginResponse.IsSuccessStatusCode)
                     Application.Current.MainPage = new AppShell();
                 else
-                    Application.Current.MainPage.DisplayAlert("", "", "");
+                    await Application.Current.MainPage.DisplayAlert(Resources.LoginUserAlertTitle,
+                         Resources.LoginAlertError,
+                         Resources.AcceptButton);
 
                 IsBusy = false;
             }
