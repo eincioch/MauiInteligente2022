@@ -2,7 +2,8 @@
     public class AboutViewModel : BaseViewModel {
         public AboutViewModel() {
             PageId = ABOUT_PAGE_ID;
-            SubTitle = AppInfo.Name;
+            Title = "ABOUT";
+            SubTitle = "Info About";
         }
 
         public string AppName => AppInfo.Name;

@@ -2,15 +2,16 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiInteligente2022.AppBase.Controls.Resources.ControlsResources">
-    <Color x:Key="SubtitleColor">Gray</Color>
+    
+    <Color x:Key="SubtitleColor">black</Color>
     
     <ControlTemplate x:Key="MasterPageTemplate">
         <Grid RowDefinitions="auto, *">
             <Grid Grid.Column="0" Grid.Row="0" ColumnDefinitions="20, auto, *, auto, 20"
                   BackgroundColor="{StaticResource SubtitleColor}">
                 <Label Grid.Column="1" HorizontalTextAlignment="Start"
-                       Text="{TemplateBinding Parent.SubTitle}" 
-                       TextColor="White" FontSize="Subtitle"/>
+                       Text="{TemplateBinding Parent.Subtitle}" 
+                       TextColor="White" FontSize="Medium"/>
 
                 <ActivityIndicator Grid.Column="2"
                                    IsRunning="{TemplateBinding Parent.IsBusy}"
@@ -19,7 +20,7 @@
 
                 <Label Grid.Column="3"
                        Text="{TemplateBinding Parent.PageId, StringFormat='MI-{0}'}"
-                       TextColor="White" FontSize="Subtitle" />
+                       TextColor="White" FontSize="Medium" />
             </Grid>
 
             <ContentPresenter Grid.Row="1" />

@@ -49,15 +49,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AndroidResource Remove="ViewModels\NewFolder\**" />
-	  <Compile Remove="ViewModels\NewFolder\**" />
-	  <EmbeddedResource Remove="ViewModels\NewFolder\**" />
-	  <MauiCss Remove="ViewModels\NewFolder\**" />
-	  <MauiXaml Remove="ViewModels\NewFolder\**" />
-	  <None Remove="ViewModels\NewFolder\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Remove="Resources\Images\correct.svg" />
 	  <None Remove="Resources\Images\incorrect.svg" />
 	  <None Remove="Resources\Images\login_user.svg" />
@@ -110,6 +101,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MainMenuPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NewReport\NewReportStep1Page.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NewReport\PreviewPhotoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SplashPage.xaml">
