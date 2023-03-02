@@ -14,7 +14,8 @@ public static class MauiProgram {
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		using var jsonConfig = Assembly.GetExecutingAssembly().GetManifestResourceStream("appsettings.json");
+		using var jsonConfig = Assembly.GetExecutingAssembly()
+					.GetManifestResourceStream("MauiInteligente2022.appsettings.json");
 		var config = new ConfigurationBuilder().AddJsonStream(jsonConfig).Build();
 		builder.Configuration.AddConfiguration(config);
 

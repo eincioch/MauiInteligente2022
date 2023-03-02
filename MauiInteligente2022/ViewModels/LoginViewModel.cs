@@ -51,7 +51,6 @@ namespace MauiInteligente2022.ViewModels {
         public Command SignupCommand { get; set; }
 
         public async Task LoginAsync() {
-            // No esta funcionando la ejecución, corregir el sdk destino
             if(!IsBusy) {
                 IsBusy = true;
 
