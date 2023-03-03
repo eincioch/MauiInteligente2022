@@ -16,7 +16,7 @@
                      HorizontalOptions="Fill"
                      VerticalOptions="Fill" />
 
-        <Label x:Name="label"
+        <Label x:Name="label" Grid.Row="1"
                HorizontalTextAlignment="Center"
                TextColor="{x:DynamicResource Primary}"
                LineBreakMode="WordWrap"
