@@ -3,12 +3,12 @@
     x:Class="MauiInteligente2022.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiInteligente2022"
+    xmlns:views="clr-namespace:MauiInteligente2022.Views"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate views:MainMenuPage}"
         Route="MainPage" />
 
 </Shell>
