@@ -1,6 +1,4 @@
-﻿using MauiInteligente2022.Views;
-
-namespace MauiInteligente2022;
+﻿namespace MauiInteligente2022;
 
 public partial class AppShell : Shell {
 	public AppShell() {

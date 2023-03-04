@@ -2,19 +2,26 @@
 <controls:BindedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls"
+             xmlns:vm="clr-namespace:MauiInteligente2022.ViewModels"
              xmlns:res="clr-namespace:MauiInteligente2022.Localization"
-             x:Class="MauiInteligente2022.Views.MainMenuPage">
+             x:Class="MauiInteligente2022.Views.MainMenuPage"
+             x:DataType="vm:MainMenuViewModel">
     <Grid RowDefinitions="*,*,*"
           ColumnDefinitions="*,*"
           RowSpacing="40"
           ColumnSpacing="20"
           Margin="20">
-        <controls:MenuItem Grid.Column="0" Grid.Row="0" Source="newreport" />
-        <controls:MenuItem Grid.Column="1" Grid.Row="0" Source="reports" />
-        <controls:MenuItem Grid.Column="0" Grid.Row="1" Source="sync" />
+        <controls:MenuItem Grid.Column="0" Grid.Row="0" Source="newreport" 
+                           Text="{x:Static res:Resources.MainMenuNewReport}" />
+        <controls:MenuItem Grid.Column="1" Grid.Row="0" Source="reports" 
+                           Text="{x:Static res:Resources.MainMenuReports}" />
+        <controls:MenuItem Grid.Column="0" Grid.Row="1" Source="sync"
+                           Text="{x:Static res:Resources.MainMenuSync}" />
         <controls:MenuItem Grid.Column="1" Grid.Row="1" Source="locations"
                            Text="{x:Static res:Resources.MainMenuLocations}"
                            MenuCommand="{Binding LocationsCommand}"/>
-        <controls:MenuItem Grid.Column="0" Grid.Row="2" Source="about" />
+        <controls:MenuItem Grid.Column="0" Grid.Row="2" Source="about"
+                           Text="{x:Static res:Resources.MainMenuAbout}"
+                           MenuCommand="{Binding AboutCommand}"/>
     </Grid>
 </controls:BindedPage>

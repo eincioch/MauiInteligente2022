@@ -180,11 +180,23 @@
   <data name="LoginUserPlaceHolder" xml:space="preserve">
     <value>Usuario</value>
   </data>
+  <data name="MainMenuAbout" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
   <data name="MainMenuLocations" xml:space="preserve">
-    <value>Ubicacion</value>
+    <value>Ubicaciones</value>
+  </data>
+  <data name="MainMenuNewReport" xml:space="preserve">
+    <value>Crear Reporte</value>
+  </data>
+  <data name="MainMenuReports" xml:space="preserve">
+    <value>Reportes</value>
   </data>
   <data name="MainMenuSubtitle" xml:space="preserve">
     <value>Elige una opción</value>
+  </data>
+  <data name="MainMenuSync" xml:space="preserve">
+    <value>Sincronizar</value>
   </data>
   <data name="MainMenuTitle" xml:space="preserve">
     <value>Menu Principal</value>

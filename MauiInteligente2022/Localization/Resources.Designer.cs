@@ -250,11 +250,38 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Location.
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        internal static string MainMenuAbout {
+            get {
+                return ResourceManager.GetString("MainMenuAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locations.
         /// </summary>
         internal static string MainMenuLocations {
             get {
                 return ResourceManager.GetString("MainMenuLocations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create Report.
+        /// </summary>
+        internal static string MainMenuNewReport {
+            get {
+                return ResourceManager.GetString("MainMenuNewReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reports.
+        /// </summary>
+        internal static string MainMenuReports {
+            get {
+                return ResourceManager.GetString("MainMenuReports", resourceCulture);
             }
         }
         
@@ -264,6 +291,15 @@ namespace MauiInteligente2022.Localization {
         internal static string MainMenuSubtitle {
             get {
                 return ResourceManager.GetString("MainMenuSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sync.
+        /// </summary>
+        internal static string MainMenuSync {
+            get {
+                return ResourceManager.GetString("MainMenuSync", resourceCulture);
             }
         }
         
