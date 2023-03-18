@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using MauiInteligente2022.AppBase.LocalStorage;
+using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
 namespace MauiInteligente2022;
@@ -37,6 +38,10 @@ public static class MauiProgram {
 						.AddTransient<BranchDetailViewModel>()
 						.AddTransient<LocationsViewModel>()
 						.AddTransient<LocationsPage>();
+
+		string dbPath = Path.Combine(FileSystem.AppDataDirectory, "mauiinteligente.db3");
+
+		builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<SQLiteAsyncClient>(s, dbPath));
 
 		builder.Services.AddHttpClient<SignUpViewModel>(client => {
 				client.Timeout = TimeSpan.FromSeconds(40);
