@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:BindedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiInteligente2022.Views.NewReportStep3Page"
+             xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls">
+    <controls:BindedPage.ToolbarItems>
+        <ToolbarItem Text="{x:Static r:Resources.NextButton}" Command="{Binding NextCommand}" />
+    </controls:BindedPage.ToolbarItems>
+    
+    <ScrollView>
+        <StackLayout Padding="20">
+            <controls:ProgressBar TotalSteps="4" CurrentStep="3" />
+            <Label x:Name="lbTitle" Text="{x:Static res:Resources.ReportDetail}" />
+            <Editor Placeholder="{x:Static res:Resources.ReportDetail}" HeightRequest="150" Text="{Binding ReportDescription}" />
+            <controls:ErrorValidationEntry Keyboard="Numeric" Placeholder="{x:Static r:Resources.ReportAmount}"                                           ErrorDescription="{Binding AmountValidator.ErrorMessage}"                                           IsValid="{Binding AmountValidator.IsValid}"                                           Text="{Binding Amount}" />
+        </StackLayout>
+    </ScrollView>
+</controls:BindedPage>
