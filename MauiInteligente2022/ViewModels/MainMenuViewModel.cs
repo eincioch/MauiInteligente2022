@@ -6,7 +6,7 @@
             PageId = MAIN_MENU_PAGE_ID;
 
             AboutCommand = new(async() => await NavigateToAsync(ABOUT_PAGE_ID));
-            LocationsCommand = new(async () => await NavigateToAsync(""));
+            LocationsCommand = new(async () => await NavigateToAsync(BRANCH_DETAIL_ID));
         }
 
         public Command AboutCommand { get; set; }
