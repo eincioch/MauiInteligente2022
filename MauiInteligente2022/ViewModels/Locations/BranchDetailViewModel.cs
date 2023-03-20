@@ -1,14 +1,13 @@
-﻿using Microsoft.Maui.Devices.Sensors;
+﻿using MauiInteligente2022.AppBase.Services.GoogleApis;
 
 namespace MauiInteligente2022.ViewModels {
     public class BranchDetailViewModel : BaseViewModel {
-        public BranchDetailViewModel() {
+        public BranchDetailViewModel(GoogleDirectionsApiClient googleDirectionsApiClient) {
             Title = Resources.BranchDetailTitle;
             PageId = BRANCH_DETAIL_ID;
-
         }
 
-        public Command ShowRoute { get; set; }
+        public Command ShowRouteCommand { get; set; }
 
         private Location currentLocation;
         public Location CurrentLocation {

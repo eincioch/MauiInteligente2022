@@ -7,4 +7,4 @@ public partial class BranchDetailPage : BindedPage {
 		InitializeComponent();
 		BindingContext = branchDetailViewModel;
 	}
-}
+} 
