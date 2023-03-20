@@ -1,4 +1,5 @@
 ﻿using MauiInteligente2022.AppBase.LocalStorage;
+using MauiInteligente2022.AppBase.Services.GoogleApis;
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
@@ -32,10 +33,11 @@ public static class MauiProgram {
 						.AddTransient<SignUpViewModel>()
 						.AddTransient<MainMenuPage>()
 						.AddTransient<MainMenuViewModel>()
-						.AddTransient<BranchDetailPage>()
-						.AddTransient<AboutPage>()
-						.AddTransient<AboutViewModel>()
+                        .AddTransient<AboutPage>()
+                        .AddTransient<AboutViewModel>()
+                        .AddTransient<BranchDetailPage>()						
 						.AddTransient<BranchDetailViewModel>()
+						.AddTransient<GoogleDirectionsApiClient>()
 						.AddTransient<LocationsViewModel>()
 						.AddTransient<LocationsPage>();
 
@@ -52,6 +54,13 @@ public static class MauiProgram {
             client.BaseAddress = new($"{builder.Configuration["Api:Uri"]}{builder.Configuration["Api:Login"]}");
         });
 
-        return builder.Build();
+		builder.Services.Configure<GoogleDirectionsOptions>
+			(builder.Configuration.GetSection(GoogleDirectionsOptions.GoogleDirections));
+
+#if DEBUG
+		//builder.Logging.AddDebug();
+#endif
+
+		return builder.Build();
 	}
 }
