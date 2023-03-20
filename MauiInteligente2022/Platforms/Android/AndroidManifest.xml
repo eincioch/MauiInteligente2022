@@ -5,7 +5,7 @@
 				 android:supportsRtl="true">
 		<meta-data android:name="com.google.android.geo.API_KEY" 
 				   android:value="AIzaSyDXgpsZhS_7IpPgFsG7dd71GnkR-Zc2Z3Q" />
-	</application>
+	</application> 
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
