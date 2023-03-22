@@ -136,7 +136,7 @@
     <value>This device has no geolocation enable</value>
   </data>
   <data name="GetLocationNotSupportedError" xml:space="preserve">
-    <value>This device does not support location</value>
+    <value>This device does not support location is required</value>
   </data>
   <data name="GetLocationPermissionError" xml:space="preserve">
     <value>Permission for geolocation</value>

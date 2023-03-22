@@ -115,7 +115,7 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This device does not support location.
+        ///   Looks up a localized string similar to This device does not support location is required.
         /// </summary>
         internal static string GetLocationNotSupportedError {
             get {

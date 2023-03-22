@@ -133,13 +133,13 @@
     <value>Error al obtener la ubicación</value>
   </data>
   <data name="GetLocationNotEnabledError" xml:space="preserve">
-    <value>Error</value>
+    <value>Este dispositivo no tiene la geolocalización habilitada</value>
   </data>
   <data name="GetLocationNotSupportedError" xml:space="preserve">
     <value>Este dispositivo no soporta localización</value>
   </data>
   <data name="GetLocationPermissionError" xml:space="preserve">
-    <value>Error</value>
+    <value>El permiso de geolocalización es requerido</value>
   </data>
   <data name="LanguagePageSubtitle" xml:space="preserve">
     <value>Español</value>
@@ -148,7 +148,7 @@
     <value>Selecciona un idioma</value>
   </data>
   <data name="LocationShowRoute" xml:space="preserve">
-    <value>Mostrar Ruta</value>
+    <value>Calcular Ruta</value>
   </data>
   <data name="LoginAlertError" xml:space="preserve">
     <value>No se pudo iniciar sesión, por favor revisa tus credenciales de acceso</value>
