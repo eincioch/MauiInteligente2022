@@ -7,11 +7,11 @@
              x:DataType="viewmodels:BranchDetailViewModel"
              x:Class="MauiInteligente2022.Views.BranchDetailPage">
     
-    <Grid RowDefinitions="20,auto,*,auto,30">
-        <Label Grid.Row="0" Text="Name" />
-        <Label Grid.Row="1" Text="Location" />
-        <Map x:Name="MyMap" Grid.Row="2" IsShowingUser="True" />
-        <Button Grid.Row="3" Text="{x:Static res:Resources.LocationShowRoute}" 
+    <Grid RowDefinitions="20,auto,auto,*,auto,30">
+        <Label Grid.Row="1" Text="{Binding Name}" />
+        <Label Grid.Row="2" Text="{Binding Location}" />
+        <Map x:Name="MyMap" Grid.Row="3" IsShowingUser="True" />
+        <Button Grid.Row="4" Text="{x:Static res:Resources.LocationShowRoute}" 
                 Command="{Binding ShowRouteCommand}" />
     </Grid>
       
