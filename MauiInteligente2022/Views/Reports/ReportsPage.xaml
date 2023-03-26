@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:BindedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiInteligente2022.Views.ReportsPage"
+             xmlns:controls="clr-namespace:MauiInteligente2022.AppBase.Controls"
+             xmlns:res="clr-namespace:MauiInteligente2022.Localization"
+             xmlns:vm="clr-namespace:MauiInteligente2022.ViewModels"
+             xmlns:model="clr-namespace:MauiInteligente2022.Models"
+             x:DataType="vm:ReportsViewModel">
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="Header">
+            <Setter Property="TextColor" Value="{x:StaticResource Primary}" />
+            <Setter Property="FontSize" Value="Medium" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <CollectionView ItemsSource="{Binding Transactions}" Margin="20">
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="model:CompletedTransaction">
+                <Border Stroke="{x:StaticResource Primary}" StrokeThickness="4"
+                        StrokeShape="RoundRectangle 10">
+                    <VerticalStackLayout>
+                        <Label Text="{x:Static res:Resources.ReportsDate}" 
+                               Style="{x:StaticResource Header}"/>
+                        <Label Text="{Binding ReportDate}" />
+                        <Label Text="{x:Static res:Resources.ReportsClient}" 
+                               Style="{x:StaticResource Header}" />
+                        <Label Text="{}" />
+                        <Label Text="{Binding ClientName}" />
+                        <Label Text="{x:Static res:Resources.ReportsAmout}" 
+                               Style="{x:StaticResource Header}" />
+                        <Label Text="{Binding Amount}" />
+                    </VerticalStackLayout>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</controls:BindedPage>
