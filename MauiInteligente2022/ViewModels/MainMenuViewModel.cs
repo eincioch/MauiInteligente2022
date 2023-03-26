@@ -7,6 +7,9 @@
 
             AboutCommand = new(async() => await NavigateToAsync(ABOUT_PAGE_ID));
             LocationsCommand = new(async () => await NavigateToAsync(BRANCH_DETAIL_ID));
+
+            ReportsCommand = new(async () => await NavigateToAsync(REPORTS_ID));
+            SyncCommand = new(async () => await NavigateToAsync(SYNC_ID));
         }
 
         public Command AboutCommand { get; set; }
@@ -15,5 +18,8 @@
             => await Shell.Current.GoToAsync(route);
 
         public Command LocationsCommand { get; set; }
+
+        public Command ReportsCommand { get; set; }
+        public Command SyncCommand { get; set; }
     }
 }

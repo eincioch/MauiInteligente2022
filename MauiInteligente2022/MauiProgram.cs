@@ -39,7 +39,11 @@ public static class MauiProgram {
 						.AddTransient<BranchDetailViewModel>()
 						.AddTransient<GoogleDirectionsApiClient>()
 						.AddTransient<LocationsViewModel>()
-						.AddTransient<LocationsPage>();
+						.AddTransient<LocationsPage>()
+						.AddTransient<ReportsViewModel>()
+						.AddTransient<ReportsPage>()
+                        .AddTransient<SyncViewModel>()
+                        .AddTransient<SyncPage>();
 
 		string dbPath = Path.Combine(FileSystem.AppDataDirectory, "mauiinteligente.db3");
 

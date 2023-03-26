@@ -14,9 +14,11 @@
         <controls:MenuItem Grid.Column="0" Grid.Row="0" Source="newreport" 
                            Text="{x:Static res:Resources.MainMenuNewReport}" />
         <controls:MenuItem Grid.Column="1" Grid.Row="0" Source="reports" 
-                           Text="{x:Static res:Resources.MainMenuReports}" />
+                           Text="{x:Static res:Resources.MainMenuReports}"
+                           MenuCommand="{Binding ReportsCommand}" />
         <controls:MenuItem Grid.Column="0" Grid.Row="1" Source="sync"
-                           Text="{x:Static res:Resources.MainMenuSync}" />
+                           Text="{x:Static res:Resources.MainMenuSync}"
+                           MenuCommand="{Binding SyncCommand}"/>
         <controls:MenuItem Grid.Column="1" Grid.Row="1" Source="locations"
                            Text="{x:Static res:Resources.MainMenuLocations}"
                            MenuCommand="{Binding LocationsCommand}"/>
