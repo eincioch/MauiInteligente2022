@@ -129,6 +129,9 @@
   <data name="ErrorMessage" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="FinishButton" xml:space="preserve">
+    <value>Finish</value>
+  </data>
   <data name="GetLocationErrorTitle" xml:space="preserve">
     <value>Error getting location</value>
   </data>
@@ -204,6 +207,18 @@
   <data name="NextButton" xml:space="preserve">
     <value>Next</value>
   </data>
+  <data name="ReportsAmout" xml:space="preserve">
+    <value>Amout:</value>
+  </data>
+  <data name="ReportsClient" xml:space="preserve">
+    <value>Client:</value>
+  </data>
+  <data name="ReportsDate" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="ReportsTitle" xml:space="preserve">
+    <value>Reports</value>
+  </data>
   <data name="SignupAddressPlaceholder" xml:space="preserve">
     <value>Address</value>
   </data>
@@ -265,6 +280,9 @@
   </data>
   <data name="SplashWelcome" xml:space="preserve">
     <value>Starting</value>
+  </data>
+  <data name="SyncTitle" xml:space="preserve">
+    <value>Sync</value>
   </data>
   <data name="TermsAcceptButton" xml:space="preserve">
     <value>Agree Terms and Condition</value>

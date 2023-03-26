@@ -97,6 +97,15 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Finish.
+        /// </summary>
+        internal static string FinishButton {
+            get {
+                return ResourceManager.GetString("FinishButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error getting location.
         /// </summary>
         internal static string GetLocationErrorTitle {
@@ -322,6 +331,42 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amout:.
+        /// </summary>
+        internal static string ReportsAmout {
+            get {
+                return ResourceManager.GetString("ReportsAmout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client:.
+        /// </summary>
+        internal static string ReportsClient {
+            get {
+                return ResourceManager.GetString("ReportsClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date:.
+        /// </summary>
+        internal static string ReportsDate {
+            get {
+                return ResourceManager.GetString("ReportsDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reports.
+        /// </summary>
+        internal static string ReportsTitle {
+            get {
+                return ResourceManager.GetString("ReportsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
         internal static string SignupAddressPlaceholder {
@@ -494,6 +539,15 @@ namespace MauiInteligente2022.Localization {
         internal static string SplashWelcome {
             get {
                 return ResourceManager.GetString("SplashWelcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sync.
+        /// </summary>
+        internal static string SyncTitle {
+            get {
+                return ResourceManager.GetString("SyncTitle", resourceCulture);
             }
         }
         
