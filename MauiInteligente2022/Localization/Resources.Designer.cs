@@ -88,6 +88,15 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Me.
+        /// </summary>
+        internal static string CurrentLocationLabel {
+            get {
+                return ResourceManager.GetString("CurrentLocationLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         internal static string ErrorMessage {

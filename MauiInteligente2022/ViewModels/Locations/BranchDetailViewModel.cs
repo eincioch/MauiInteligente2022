@@ -8,7 +8,7 @@ namespace MauiInteligente2022.ViewModels {
             Title = Resources.BranchDetailTitle;
             PageId = BRANCH_DETAIL_ID;
             _directionsApiClient = googleDirectionsApiClient;
-            Location = "Calz. Vallejo 1090, Sta Cruz de las Salinas, Azcapotzalco, 02300 Ciudad de México, CDMX";
+            Location = "Semaforos de Villa Progreso 1 cuadra al Oeste, Managua, Managua";
             ShowRouteCommand = new(async () => await ShowRouteAsync());
         }
 
@@ -62,6 +62,7 @@ namespace MauiInteligente2022.ViewModels {
         public Command ShowRouteCommand { get; set; }
         private async Task ShowRouteAsync() {
             if (!IsBusy) {
+                IsBusy = true;
                 try {
                     var placemarks = await Geocoding.GetPlacemarksAsync(currentLocation);
                     string origin;

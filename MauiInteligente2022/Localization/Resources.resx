@@ -126,6 +126,9 @@
   <data name="BranchDetailTitle" xml:space="preserve">
     <value>Branch</value>
   </data>
+  <data name="CurrentLocationLabel" xml:space="preserve">
+    <value>Me</value>
+  </data>
   <data name="ErrorMessage" xml:space="preserve">
     <value>Error</value>
   </data>
