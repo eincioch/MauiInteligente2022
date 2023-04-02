@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutAppVersion" xml:space="preserve">
+    <value>Versión de la aplicación</value>
+  </data>
+  <data name="AboutDeviceModel" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="AboutDeviceName" xml:space="preserve">
+    <value>Nombre del dispositivo</value>
+  </data>
+  <data name="AboutDevicePlatform" xml:space="preserve">
+    <value>Sistema Operativo</value>
+  </data>
+  <data name="AboutDeviceSystemVersion" xml:space="preserve">
+    <value>Versión del Sistema</value>
+  </data>
+  <data name="AboutManufacturer" xml:space="preserve">
+    <value>Fabricante</value>
+  </data>
   <data name="AboutTitle" xml:space="preserve">
     <value>Acerca de</value>
   </data>

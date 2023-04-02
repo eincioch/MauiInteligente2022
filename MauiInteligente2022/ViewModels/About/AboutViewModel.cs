@@ -5,7 +5,7 @@ namespace MauiInteligente2022.ViewModels {
         public AboutViewModel() {
             PageId = ABOUT_PAGE_ID;
             Title = Resources.AboutTitle;
-            SubTitle = "Información Acerca de";
+            SubTitle = AppInfo.Name;
         }
 
         public string AppName => AppInfo.Name;

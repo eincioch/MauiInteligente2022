@@ -61,6 +61,60 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to App Version.
+        /// </summary>
+        internal static string AboutAppVersion {
+            get {
+                return ResourceManager.GetString("AboutAppVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model.
+        /// </summary>
+        internal static string AboutDeviceModel {
+            get {
+                return ResourceManager.GetString("AboutDeviceModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Device Name.
+        /// </summary>
+        internal static string AboutDeviceName {
+            get {
+                return ResourceManager.GetString("AboutDeviceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DevicePlatform.
+        /// </summary>
+        internal static string AboutDevicePlatform {
+            get {
+                return ResourceManager.GetString("AboutDevicePlatform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System Version.
+        /// </summary>
+        internal static string AboutDeviceSystemVersion {
+            get {
+                return ResourceManager.GetString("AboutDeviceSystemVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manufacturer.
+        /// </summary>
+        internal static string AboutManufacturer {
+            get {
+                return ResourceManager.GetString("AboutManufacturer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
         internal static string AboutTitle {

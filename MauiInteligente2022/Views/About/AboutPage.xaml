@@ -38,14 +38,19 @@
             <Label Text="{Binding AppName}" Style="{StaticResource AboutLabelHeader}" />
         </Border>
 
-        <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource AboutLabelVersion}"
+        <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" 
+               Style="{StaticResource AboutLabelVersion}"
                Text="{Binding AppVersion}" />
-
-        <Label Grid.Column="0" Grid.Row="2" Text="DeviceName" Style="{StaticResource AboutLabelData}" />
-        <Label Grid.Column="0" Grid.Row="3" Text="Platform" Style="{StaticResource AboutLabelData}" />
-        <Label Grid.Column="0" Grid.Row="4" Text="SystemVersion" Style="{StaticResource AboutLabelData}" />
-        <Label Grid.Column="0" Grid.Row="5" Text="Manufacturer" Style="{StaticResource AboutLabelData}" />
-        <Label Grid.Column="0" Grid.Row="6" Text="DeviceModel" Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="2" Text="{x:Static res:Resources.AboutDeviceName}" 
+               Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="3" Text="{x:Static res:Resources.AboutDevicePlatform}" 
+               Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="4" Text="{x:Static res:Resources.AboutDeviceSystemVersion}"
+               Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="5" Text="{x:Static res:Resources.AboutManufacturer}" 
+               Style="{StaticResource AboutLabelData}" />
+        <Label Grid.Column="0" Grid.Row="6" Text="{x:Static res:Resources.AboutDeviceModel}" 
+               Style="{StaticResource AboutLabelData}" />
 
         <Label Grid.Column="1" Grid.Row="2" Text="{Binding DeviceName}" />
         <Label Grid.Column="1" Grid.Row="3" Text="{Binding DevicePlatform}" />
