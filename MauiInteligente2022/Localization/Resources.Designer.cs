@@ -340,6 +340,15 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Destination.
+        /// </summary>
+        internal static string PinLabelDestination {
+            get {
+                return ResourceManager.GetString("PinLabelDestination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Amout:.
         /// </summary>
         internal static string ReportsAmout {

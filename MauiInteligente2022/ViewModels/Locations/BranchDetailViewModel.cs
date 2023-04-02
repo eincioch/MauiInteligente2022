@@ -1,5 +1,6 @@
 ﻿using MauiInteligente2022.AppBase.Services.GoogleApis;
 using System.Diagnostics;
+using System.Web;
 
 namespace MauiInteligente2022.ViewModels {
     public class BranchDetailViewModel : BaseViewModel {
@@ -45,15 +46,19 @@ namespace MauiInteligente2022.ViewModels {
                 if (location is not null)
                     currentLocation = location;
             } catch (FeatureNotSupportedException fnsEx) {
+                Debug.Write(fnsEx.Message);
                 await Application.Current.MainPage.DisplayAlert(
                     Resources.GetLocationErrorTitle, Resources.GetLocationNotSupportedError, Resources.AcceptButton);
             } catch (FeatureNotEnabledException fneEx) {
+                Debug.Write(fneEx.Message);
                 await Application.Current.MainPage.DisplayAlert(
                     Resources.GetLocationErrorTitle, Resources.GetLocationNotEnabledError, Resources.AcceptButton);
             } catch (PermissionException pEx) {
+                Debug.Write(pEx.Message);
                 await Application.Current.MainPage.DisplayAlert(
                     Resources.GetLocationErrorTitle, Resources.GetLocationPermissionError, Resources.AcceptButton);
             } catch (Exception ex) {
+                Debug.Write(ex.Message);
                 await Application.Current.MainPage.DisplayAlert(
                     Resources.GetLocationErrorTitle, Resources.ErrorMessage, Resources.AcceptButton);
             }
@@ -68,13 +73,14 @@ namespace MauiInteligente2022.ViewModels {
                     string origin;
 
                     if (placemarks is not null) {
-                        var placemark = placemarks.ToList()[2];
+                        var placemark = placemarks.ToList()[0];
                         origin = $"{placemark.FeatureName} {placemark.SubLocality} {placemark.Locality}, " +
                                 $"{placemark.CountryName}, {placemark.PostalCode}";
                     } else {
                         origin = $"{currentLocation.Latitude}, {currentLocation.Longitude}";
                     }
-                    var directions = await _directionsApiClient.GetGoogleDirectionsAsync(origin, Location);
+                    var directions = await _directionsApiClient.GetGoogleDirectionsAsync(
+                        HttpUtility.UrlEncode(origin), HttpUtility.UrlEncode(Location));
 
                     var steps = directions?.routes.FirstOrDefault()?.legs?.FirstOrDefault()?.steps;
 

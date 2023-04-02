@@ -210,6 +210,9 @@
   <data name="NextButton" xml:space="preserve">
     <value>Siguiente</value>
   </data>
+  <data name="PinLabelDestination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
   <data name="ReportsAmout" xml:space="preserve">
     <value>Monto:</value>
   </data>
