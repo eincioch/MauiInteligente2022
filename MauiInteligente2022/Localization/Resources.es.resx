@@ -210,6 +210,9 @@
   <data name="MainMenuLocations" xml:space="preserve">
     <value>Ubicaciones</value>
   </data>
+  <data name="MainMenuLogout" xml:space="preserve">
+    <value>Cerrar Sesión</value>
+  </data>
   <data name="MainMenuNewReport" xml:space="preserve">
     <value>Crear Reporte</value>
   </data>

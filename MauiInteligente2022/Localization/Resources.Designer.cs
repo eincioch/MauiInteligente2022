@@ -340,6 +340,15 @@ namespace MauiInteligente2022.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string MainMenuLogout {
+            get {
+                return ResourceManager.GetString("MainMenuLogout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create Report.
         /// </summary>
         internal static string MainMenuNewReport {

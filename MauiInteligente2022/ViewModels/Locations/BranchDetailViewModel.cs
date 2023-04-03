@@ -9,7 +9,7 @@ namespace MauiInteligente2022.ViewModels {
             Title = Resources.BranchDetailTitle;
             PageId = BRANCH_DETAIL_ID;
             _directionsApiClient = googleDirectionsApiClient;
-            Location = "Semaforos de Villa Progreso 1 cuadra al Oeste, Managua, Managua";
+            Location = "Multicentro Las Americas, Managua, Managua";
             ShowRouteCommand = new(async () => await ShowRouteAsync());
         }
 
