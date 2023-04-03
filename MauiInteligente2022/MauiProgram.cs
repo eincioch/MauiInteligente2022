@@ -1,6 +1,7 @@
 ﻿using MauiInteligente2022.AppBase.LocalStorage;
 using MauiInteligente2022.AppBase.Services.GoogleApis;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System.Reflection;
 
 namespace MauiInteligente2022;
@@ -62,7 +63,7 @@ public static class MauiProgram {
 			(builder.Configuration.GetSection(GoogleDirectionsOptions.GoogleDirections));
 
 #if DEBUG
-		//builder.Logging.AddDebug();
+		builder.Logging.AddDebug();
 #endif
 
 		return builder.Build();
