@@ -61,7 +61,7 @@ public class LoginViewModel : BaseViewModel {
 
             if (loginResponse.IsSuccessStatusCode) {
                 var userToken = await loginResponse.Content.ReadFromJsonAsync<string>();
-                AppConfiguration.UserToken = userToken;
+                Configuration.AppConfiguration.UserToken = userToken;
                 Application.Current.MainPage = new AppShell();
             } else
                 await Application.Current.MainPage.DisplayAlert(Resources.LoginUserAlertTitle,
@@ -75,9 +75,5 @@ public class LoginViewModel : BaseViewModel {
     public async Task SignupAsync() {
         await App.Current.MainPage.Navigation.PushAsync(
                 ServiceProvider.GetRequiredService<SignUpPage>());
-    }
-
-    public async override Task OnAppearing() {
-        await base.OnAppearing();
     }
 }

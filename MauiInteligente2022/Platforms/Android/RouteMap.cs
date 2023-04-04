@@ -5,7 +5,7 @@ using Microsoft.Maui.Platform;
 namespace MauiInteligente2022.AppBase.Controls;
 public partial class RouteMap {
     class MapCallBackHandler : Java.Lang.Object, IOnMapReadyCallback {
-        GoogleMap _googleMap;
+        GoogleMap? _googleMap;
         RouteMap _routeMap;
 
         public MapCallBackHandler(RouteMap routeMap) {
@@ -24,6 +24,9 @@ public partial class RouteMap {
     }
 
     internal void OnMapReady(GoogleMap googleMap) {
+        if (googleMap == null)
+            return;
+
         nativeMap = googleMap;
         nativeMap.MarkerClick += NativeMap_MarkerClick;
     }
@@ -32,12 +35,14 @@ public partial class RouteMap {
         => e.Marker.ShowInfoWindow();
 
     void AddColorPins() {
-        foreach (var colorPin in ColorPins) {
-            var marker = new MarkerOptions();
-            marker.SetTitle(colorPin.Label);
-            marker.SetPosition(new(colorPin.Location.Latitude, colorPin.Location.Longitude));
-            marker.SetIcon(GetColorMarkerIcon(colorPin.Color));
-            nativeMap.AddMarker(marker);
+        if (nativeMap is not null) {
+            foreach (var colorPin in ColorPins) {
+                var marker = new MarkerOptions();
+                marker.SetTitle(colorPin.Label);
+                marker.SetPosition(new(colorPin.Location.Latitude, colorPin.Location.Longitude));
+                marker.SetIcon(GetColorMarkerIcon(colorPin.Color));
+                nativeMap.AddMarker(marker);
+            }
         }
     }
 

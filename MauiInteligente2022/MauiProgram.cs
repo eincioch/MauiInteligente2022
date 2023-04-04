@@ -1,5 +1,6 @@
 ﻿using MauiInteligente2022.AppBase.LocalStorage;
 using MauiInteligente2022.AppBase.Services.GoogleApis;
+using MauiInteligente2022.RestServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Reflection;
@@ -59,7 +60,13 @@ public static class MauiProgram {
             client.BaseAddress = new($"{builder.Configuration["Api:Uri"]}{builder.Configuration["Api:Login"]}");
         });
 
-		builder.Services.Configure<GoogleDirectionsOptions>
+        builder.Services.AddHttpClient<BranchRestService>(client => {
+            client.Timeout = TimeSpan.FromSeconds(40);
+            client.BaseAddress = new($"{builder.Configuration["Api:Uri"]}{builder.Configuration["Api:Branches"]}");
+
+        });
+
+        builder.Services.Configure<GoogleDirectionsOptions>
 			(builder.Configuration.GetSection(GoogleDirectionsOptions.GoogleDirections));
 
 #if DEBUG

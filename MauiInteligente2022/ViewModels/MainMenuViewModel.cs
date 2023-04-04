@@ -6,7 +6,7 @@ public class MainMenuViewModel : BaseViewModel {
         PageId = MAIN_MENU_PAGE_ID;
 
         AboutCommand = new(async() => await NavigateToAsync(ABOUT_PAGE_ID));
-        LocationsCommand = new(async () => await NavigateToAsync(BRANCH_DETAIL_ID));
+        LocationsCommand = new(async () => await NavigateToAsync(BRANCHES_ID));
         LogoutCommand = new(() => {
             AppConfiguration.UserToken = null;
             App.Current.MainPage = new NavigationPage(sp.GetRequiredService<LoginPage>());
