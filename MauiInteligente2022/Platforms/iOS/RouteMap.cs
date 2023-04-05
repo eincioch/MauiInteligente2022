@@ -6,10 +6,11 @@ public partial class RouteMap {
     public RouteMap() {
     }
 
-    private IMKAnnotation CreateAnnotatio(ColorPin colorPin) {
+    private IMKAnnotation CreateAnnotation(ColorPin colorPin) {
         var annotation = new ColorPointAnnotation(colorPin.Color.ToPlatform()) {
             Title = colorPin.Label,
-            Coordinate = new(colorPin.Location.Latitude, colorPin.Location.Longitude)
+            Coordinate = new CoreLocation.CLLocationCoordinate2D(
+                colorPin.Location.Latitude, colorPin.Location.Longitude)
         };
         return annotation;
     }
@@ -24,11 +25,11 @@ public partial class RouteMap {
         var colorAnnotation = annotation as ColorPointAnnotation;
         MKMarkerAnnotationView view = null;
 
-        if (colorAnnotation is null) {
+        if (colorAnnotation is not null) {
             var identifier = "colorAnnotation";
             view = mapView.DequeueReusableAnnotation(identifier) as MKMarkerAnnotationView;
 
-            if (view is null) 
+            if (view is null)
                 view = new(colorAnnotation, identifier);
 
             view.CanShowCallout = true;
@@ -38,15 +39,16 @@ public partial class RouteMap {
     }
 
     void AddColorPins() {
-        if (Handler.PlatformView as MKMapView mapView)
+        if (Handler.PlatformView is MapKit.MKMapView mapView) {
             foreach (var colorPin in ColorPins) {
                 var annotation = CreateAnnotation(colorPin);
                 mapView.AddAnnotation(annotation);
             }
+        }
     }
+}
 
-    class ColorPointAnnotation : MKPointAnnotation {
-        public UIColor Color { get; private set; }
-        public ColorPointAnnotation(UIColor color) => Color = color;
-    }
+public class ColorPointAnnotation : MKPointAnnotation {
+    public UIColor Color { get; private set; }
+    public ColorPointAnnotation(UIColor color) => Color = color;
 }
