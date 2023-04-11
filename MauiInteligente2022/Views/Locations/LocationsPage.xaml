@@ -7,6 +7,8 @@
              x:Class="MauiInteligente2022.Views.LocationsPage"
              xmlns:models="clr-namespace:MauiInteligente2022.Models"
              x:DataType="vm:LocationsViewModel">
+
+    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
     <CollectionView SelectionMode="Single"
                     ItemsSource="{Binding Branches}"
                     SelectedItem="{Binding SelectedBranch}"
@@ -16,9 +18,15 @@
             <DataTemplate>
                 <Grid Margin="10" RowDefinitions="15,50" ColumnDefinitions="20*, 80*"
                       x:DataType="models:Branch">
-                    <Border Grid.RowSpan="2" VerticalOptions="Center" HorizontalOptions="Center"
+                    <Border Grid.RowSpan="2" 
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Center"
                             BackgroundColor="{x:DynamicResource Primary}"
-                            HeightRequest="50" WidthRequest="50" Padding="5">
+                            HeightRequest="50" 
+                            WidthRequest="50" 
+                            Padding="5">
                         <Label Text="{Binding BranchId}" FontSize="Medium"
                                TextColor="White" VerticalOptions="Center"
                                HorizontalOptions="Center"/>
@@ -31,4 +39,5 @@
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
+    </RefreshView>
 </controls:BindedPage>

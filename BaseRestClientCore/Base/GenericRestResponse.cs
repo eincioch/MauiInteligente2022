@@ -1,4 +1,7 @@
-﻿namespace BaseRestClientCore.Base;
+﻿using BaseRestClientCore.Enums;
+using BaseRestClientCore.Interfaces;
+
+namespace BaseRestClientCore.Base;
 
 public class GenericRestResponse<U> : IRestResponse<U>
     where U : class {

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Web;
 
 namespace MauiInteligente2022.ViewModels {
-    public class BranchDetailViewModel : BaseViewModel {
+    public class BranchDetailViewModel : BaseViewModel, IQueryAttributable {
         private GoogleDirectionsApiClient _directionsApiClient;
         public BranchDetailViewModel(GoogleDirectionsApiClient googleDirectionsApiClient) {
             Title = Resources.BranchDetailTitle;
@@ -11,6 +11,12 @@ namespace MauiInteligente2022.ViewModels {
             _directionsApiClient = googleDirectionsApiClient;
             Location = "Multicentro Las Americas, Managua, Managua";
             ShowRouteCommand = new(async () => await ShowRouteAsync());
+        }
+
+        public void ApplyQueryAttributes(IDictionary<string, object> query) {
+            Branch branch = query["branch"] as Branch;
+            SubTitle = branch.Name;
+            Location = branch.Location;
         }
 
         private string name;

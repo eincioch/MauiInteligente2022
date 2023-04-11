@@ -1,4 +1,6 @@
-﻿namespace BaseRestClientCore.Base;
+﻿using BaseRestClientCore.Interfaces;
+
+namespace BaseRestClientCore.Base;
 
 public class GenericRestClient<T, U> : BaseRestService, IRestService<T, U>
     where T : class
@@ -12,17 +14,17 @@ public class GenericRestClient<T, U> : BaseRestService, IRestService<T, U>
     }
 
     public async Task<IRestResponse<U>> GetAsync(int id, string uri = "")
-       => await SendReceiveRequestAsync<U, U>(HttpMethod.Get, $"{uri}{id}");
+       => await SendReceiveAsync<U, U>(HttpMethod.Get, uri: $"{uri}{id}");
 
     public async Task<IRestResponse<IEnumerable<U>>> GetAllAsync(string uri = "")
-    => await SendReceiveRequestAsync<U, IEnumerable<U>>(HttpMethod.Get, $"{uri}");
+    => await SendReceiveAsync<U, IEnumerable<U>>(HttpMethod.Get, uri: $"{uri}");
 
     public async Task<IRestResponse<U>> PostAsync(T content, string uri = "")
-     => await SendReceiveRequestAsync<T, U>(HttpMethod.Post, $"{uri}", content);
+     => await SendReceiveAsync<T, U>(HttpMethod.Post, content, $"{uri}");
 
     public async Task<IRestResponse<U>> DeleteAsync(int id, string uri = "")
-       => await SendReceiveRequestAsync<U, U>(HttpMethod.Delete, $"{uri}{id}");
+       => await SendReceiveAsync<U, U>(HttpMethod.Delete, uri: $"{uri}{id}");
 
     public async Task<IRestResponse<U>> PutAsync(int id, T content, string uri = "")
-     => await SendReceiveRequestAsync<T, U>(HttpMethod.Put, $"{uri}{id}", content);
+     => await SendReceiveAsync<T, U>(HttpMethod.Put, content, $"{uri}{id}");
 }

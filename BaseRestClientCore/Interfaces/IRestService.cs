@@ -1,4 +1,4 @@
-﻿namespace BaseRestClientCore.Base;
+﻿namespace BaseRestClientCore.Interfaces;
 
 public interface IRestService<T, U>
         where U : class
